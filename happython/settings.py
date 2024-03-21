@@ -29,7 +29,7 @@ SECRET_KEY = 'SECRET_KEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brokenhelix-happiness-onv51o1rw0g.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['8000-brokenhelix-happiness-onv51o1rw0g.ws-eu110.gitpod.io', 'https://happiness-generator-c0a5ad8756d8.herokuapp.com']
 
 
 # Application definition
