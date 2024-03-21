@@ -11,14 +11,17 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -29,7 +32,8 @@ SECRET_KEY = 'SECRET_KEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brokenhelix-happiness-onv51o1rw0g.ws-eu110.gitpod.io', 'happiness-generator-c0a5ad8756d8.herokuapp.com']
+ALLOWED_HOSTS = ['8000-brokenhelix-happiness-onv51o1rw0g.ws-eu110.gitpod.io', 'happiness-generator-c0a5ad8756d8.herokuapp.com', '127.0.0.1:8000', '127.0.0.1']
+
 
 
 # Application definition
@@ -59,7 +63,7 @@ ROOT_URLCONF = 'happython.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        "DIRS": [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
