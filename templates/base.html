@@ -11,15 +11,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>{% block title %}Happiness{% endblock %}</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            min-height: 90vh;
+        }
+    </style>
 </head>
 <body>
     <div class="content">
         <!-- Header start -->
         <header>
             <!-- Navigation bar -->
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-success">
                 <a class="navbar-brand" href="#">
-                    <img src="" alt="" class="navbar-logo">
+                    <img src="" alt="" class="navbar-logo"> Logo Here
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +41,7 @@
                             <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link about-link" href="#" data-target-url="">About</a>
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -40,13 +50,6 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span>
-                                    {% if user.is_superuser %}
-                                    Admin
-                                    {% else %}
-                                    User
-                                    {% endif %}
-                                </span>
                                 {{ user.username }}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -73,15 +76,17 @@
             </nav>
         </header>
 
-        <div>
+        <div class="flex-grow-1">
             {% block content %}{% endblock %}
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-success text-white py-3">
         <div class="container">
-            <p> This will be a footer, it is located in base.html</p>
+            <div class="text-center">
+                <p> This will be a footer, it is located in base.html</p>
+            </div>
         </div>
     </footer>
     
