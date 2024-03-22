@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .text-center{
+        text-align:center;
+    }
+    .center-container{
+       width:50%;
+       margin: 0 auto;
+    }
+</style>
+<!-- Title -->
+<div class="center-container text-center">
+    <h1>Happiness Generator</h1>
+</div>
+<div class="center-container text-center">
+        <p> Hello, this is the index page content, manage it in index.html template</p>
+</div>
+<!-- Big Button -->
+<div class="center-container big-button">
+    <button>
+        Button
+    </button>
+    <!-- Next button -->
+    <div class="center-container">
+    <button class="next-button">
+        Next
+    </button>
+    <!-- Add Yours Button -->
+    <div class="center-container">
+    <button class="add-yours-button">
+        Add Yours
+    </button>
+</div>
+</div>
+{% endblock %}
