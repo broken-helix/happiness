@@ -90,3 +90,7 @@ footer {
   transform: scale(0.9);
   transition: 200ms ease-in-out;
 }
+
+.hidden {
+  display: none;
+}
