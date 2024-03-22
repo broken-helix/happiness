@@ -4,9 +4,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Website dedicated to generate happiness" />
+    <meta name="keywords" content="happiness, smile, luck, world, joy, laughter" />
+    <meta name="author" content="Happy Hacks" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon-16x16.png" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -34,7 +35,7 @@
       <header>
         <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'home' %}">
             <img src="{% static 'images/logo.png' %}" alt="Logo" class="navbar-logo" />
           </a>
           <button
