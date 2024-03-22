@@ -12,12 +12,43 @@ nav {
   background-color: #f4a261;
 }
 
+/* Styling for the hamburger menu icon */
+.lines-button {
+  color: #264653;
+}
+
+/* Styling for the navigation links */
 .navbar-dark .navbar-nav .nav-link {
-    color: black;
-  }
+  color: #264653;
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* Styling for dropdown menu */
+.navbar-dark .navbar-nav .nav-item.dropdown.show .nav-link {
+  background-color: #2a9d8f;
+  color: white;
+}
 
 p {
   color: #264653;
+}
+
+.navbar-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #2a9d8f;
 }
 
 footer {
