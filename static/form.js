@@ -1,6 +1,8 @@
 const emojiPickerButton = document.getElementById("emojiPickerButton");
 const emojiPickerInput = document.getElementById("emoji");
 
+console.log("load form.js");
+
 const pickerOptions = { onEmojiSelect: selectEmoji };
 const picker = new EmojiMart.Picker(pickerOptions);
 
