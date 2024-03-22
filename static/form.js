@@ -15,5 +15,7 @@ emojiPickerButton.addEventListener("click", () => {
 });
 
 function selectEmoji(emoji) {
+  console.log(emoji);
+
   emojiPickerInput.value += emoji.native;
 }
