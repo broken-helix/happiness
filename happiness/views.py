@@ -4,9 +4,16 @@ from django.contrib.auth import get_user_model
 from django.contrib import messages
 from django.views import generic
 from .forms import PostForm
+from .models import Post
+
 
 class HomeView(TemplateView):
     template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['posts'] = Post.objects.all()
+        return context
 
 
 class AddPostPage(generic.CreateView):
