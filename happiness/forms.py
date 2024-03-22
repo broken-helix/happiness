@@ -1,6 +1,5 @@
 """Forms"""
 from django import forms
-from django.contrib.auth.models import User
 from .models import Post
 
 class PostForm(forms.ModelForm):
@@ -13,4 +12,4 @@ class PostForm(forms.ModelForm):
         """Get post model, choose fields to display"""
 
         model = Post
-        fields = ["title", "author", "slug", "content", "emoji"]
+        fields = ["title", "emoji"]

@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -74,10 +74,7 @@ ROOT_URLCONF = 'happython.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
-        ],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -96,16 +93,16 @@ WSGI_APPLICATION = 'happython.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
- # DATABASES = {
- #     'default': {
- #         'ENGINE': 'django.db.backends.sqlite3',
- #         'NAME': BASE_DIR / 'db.sqlite3',
- #     }
- # }
-    
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+# }
 
 
 

@@ -1,24 +1,17 @@
 from django.views.generic import TemplateView
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import get_user_model
+from django.contrib import messages
 from django.views import generic
 from .forms import PostForm
-from .models import Post
 
 class HomeView(TemplateView):
     template_name = 'index.html'
 
 
-class AddPostPage(LoginRequiredMixin, generic.CreateView):
+class AddPostPage(generic.CreateView):
     """
     Allows a logged-in user to create a new blog post.
-
-    Methods:
-    - form_valid: Overrides the base method to set the post author to the
-      currently logged-in user before saving the form.
-
-    Mixins:
-    - LoginRequiredMixin: Ensures that only authenticated users can access
-      this view.
     """
 
     form_class = PostForm
@@ -26,7 +19,11 @@ class AddPostPage(LoginRequiredMixin, generic.CreateView):
     success_url = "/"
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        User = get_user_model()
+        if self.request.user.is_authenticated:
+            form.instance.author = self.request.user
+        else:
+            form.instance.author = User.objects.get_or_create(username='anonymous')[0]
         response = super().form_valid(form)
         messages.success(
             self.request,
