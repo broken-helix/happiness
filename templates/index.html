@@ -3,5 +3,12 @@
 {% block content %}
 <div class="container text-center">
     <p> Hello, this is the index page content, manage it in index.html template</p>
+
+
+    {% for post in posts  %}
+
+    {% include "includes/postcard.html" with post=post %}
+    
+    {% endfor %}
 </div>
 {% endblock %}
