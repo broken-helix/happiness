@@ -1,20 +1,170 @@
-<form
-  method="post"
-  enctype="multipart/form-data"
-  class="custom-form p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-white my-3"
->
-  {% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <div class="form-group">
-    <label for="id_title">Title:</label>
-    {{ form.title }}
-  </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* gradient background styling*/
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "DM sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        text-shadow: 0px 0px 1px #000000;
 
-  <div class="form-group">
-    <label for="id_emoji">Emoji:</label>
-    {{ form.emoji }}
-  </div>
+        background-attachment: fixed;
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<div id="emoji-picker"></div>
+        background-image: linear-gradient(
+          to right top,
+          #2a9d8f,
+          #4ba885,
+          #6db27a,
+          #91ba6f,
+          #b6c068,
+          #c8bc60,
+          #dab65c,
+          #ebb05d,
+          #eca056,
+          #eb9052,
+          #ea8050,
+          #e76f51
+        );
+      }
+      button {
+        font-family: "DM sans", sans-serif;
+        font-optical-sizing: auto;
+
+        font-weight: 300;
+        font-style: normal;
+        text-shadow: 0px 0px 1px #ffffff;
+      }
+
+      /* Workaround to make the Background Image semi-transparent for the Gradient to show through */
+      .background-image-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .background-image-container::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0;
+        height: 100vh;
+        background-image: url("assets/images/IMG_1226.jpeg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2;
+        z-index: -1;
+      }
+
+      /*------------------------------------*/
+
+      h1 {
+        font-weight: bolder;
+      }
+
+      div {
+      }
+      .text-center {
+        text-align: center;
+      }
+      .center-container {
+        width: 50%;
+        margin: 0 auto;
+        padding: 1%;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+      }
+
+      .main-button {
+        background-color: #e9c46a;
+        border: none;
+        color: white;
+        padding: 32px 32px;
+        text-align: center;
+
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: crosshair;
+        border-radius: 15px;
+        border-color: white;
+        box-shadow: 0px 0px 4px #264653;
+      }
+
+      .inline-button-divs {
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+      }
+
+      .welcome-header {
+        background-color: rgba(38, 70, 83, 20%);
+        border-radius: 16px;
+        padding-bottom: 5%;
+        box-shadow: 0px 0px 4px #264653;
+        margin: 5%;
+      }
+
+      #button1 {
+        background-color: #e76f51;
+      }
+    </style>
+  </head>
+  <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  <body>
+    <div class="background-image-container"></div>
+    <section class="welcome-header">
+      <!-- Title -->
+      <div class="center-container text-center">
+        <h1>happiness generator</h1>
+      </div>
+
+      <!-- WELCOME TEXT-->
+      <div class="center-container text-center welcome-text">
+        <p>
+          Dont worry! You are not alone. I was an unhappy website just recently.
+          But then i was hugged and i transcended to the wisdom of love and joy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Big Buttons -->
+    <div class="inline-button-divs">
+      <div class="big-button button-container">
+        <button class="main-button" id="button1">MAKE ME HAPPY</button>
+      </div>
+      <!-- <div  class="big-button button-container">
+            <button class="main-button">
+                Journal your own experience
+            </button>
+        </div> -->
+    </div>
+  </body>
+</html>
