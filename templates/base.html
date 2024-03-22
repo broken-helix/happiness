@@ -100,6 +100,13 @@
       <div class="flex-grow-1">{% block content %}{% endblock %}</div>
     </div>
 
+    <audio class="hidden" id="audio" controls>
+      <source src="{% static 'audio/happy.mp3' %}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="btn-music">
+      <i class="fa-solid fa-music"></i>
+    </button>
     <!-- Footer -->
     <footer class="footer text-white py-3">
       <div class="container">
@@ -113,6 +120,7 @@
     src="https://kit.fontawesome.com/27545168c5.js"
     crossorigin="anonymous"
   ></script>
+  <script src="{% static 'script.js' %}"></script> 
 
     <!-- Bootstrap JavaScript -->
     {% block extra_js %}{% endblock extra_js %}
