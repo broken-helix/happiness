@@ -1,0 +1,21 @@
+#main-button {
+    background-color: #E9c46A; 
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Use inline-block */
+    font-size: 16px; /* Set font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .text-center{
+    text-align:center;
+}
+.center-container{
+   width:50%;
+   margin: 0 auto;
+}
