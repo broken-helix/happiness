@@ -1,0 +1,29 @@
+    <article class="card p-3 mb-2">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex flex-row align-items-center">
+          <div class="icon">&#x1F60A;
+        </div>
+          <div class="mx-2 c-details">
+            <h6 class="mb-0">{{post.author}}</h6>
+            <span>{{post.created_at}}</span>
+          </div>
+        </div>
+        <button class="badge-button">
+            {% if post.liked %}
+            <i class="fa-solid fa-heart h4 text-danger m-0"></i>
+
+          {% else %}
+          <i class="fa-regular fa-heart h4 text-danger m-0"></i>
+          {% endif %}
+        </button>
+      </div>
+      <div class="mt-5">
+        <p class="text-secondary">
+            {{post.title}}
+        </p>
+
+        <div class="d-flex flex-row align-items-center">
+            <div>{{post.emoji}}
+          </div>
+      </div>
+  </article>
