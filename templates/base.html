@@ -16,6 +16,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+    {% block extra_css %}
+    {% endblock extra_css %}
 
     <title>{% block title %}Happy Hacks{% endblock %}</title>
   </head>
