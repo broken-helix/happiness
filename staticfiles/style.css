@@ -1,3 +1,25 @@
 body {
-    background-color: red;
+  font-family: "Roboto Slab", sans-serif;
+  height: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: #f4a261;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+  }
+
+p {
+  color: #264653;
+}
+
+footer {
+  background-color: #f4a261;
 }
