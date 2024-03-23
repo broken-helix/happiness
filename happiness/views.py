@@ -2,6 +2,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
 from django.contrib import messages
+from django.shortcuts import get_object_or_404, redirect
 from django.views import generic
 from .forms import PostForm
 from .models import Post
@@ -13,7 +14,22 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.all()
+        context['user'] = self.request.user
         return context
+    
+    def post(self, request):
+        post_id = request.POST.get('post_id')
+        post = get_object_or_404(Post, pk=post_id)
+        if request.user.is_authenticated:
+            if post.likes.filter(id=request.user.id).exists():
+                post.likes.remove(request.user)
+            else:
+                post.likes.add(request.user)
+            messages.success(request, "Post liked/unliked successfully!")
+        else:
+            messages.error(request, "You need to be logged in to like a post.")
+            liked = None
+        return redirect('home')
 
 
 class AddPostPage(generic.CreateView):

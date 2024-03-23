@@ -20,6 +20,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     emoji = models.CharField(default="😀", max_length=200,)
     created_on = models.DateTimeField(auto_now=True)
+    likes = models.ManyToManyField(User, related_name="post_likes", blank=True)
 
 
     class Meta:
@@ -36,3 +37,9 @@ class Post(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+    
+    def user_has_liked(self, user):
+        return self.likes.filter(id=user.id).exists()
+
+    def number_of_likes(self):
+        return self.likes.count()
