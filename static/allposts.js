@@ -12,6 +12,8 @@ searchBar.addEventListener("input", (event) => {
 });
 
 function searchPosts(searchTerm, posts) {
+  const searchTerms = searchTerm.split(" ");
+
   posts.forEach((post) => {
     const postTitle = post
       .querySelector("[data-title]")
@@ -28,9 +30,9 @@ function searchPosts(searchTerm, posts) {
     const article = post.closest("article");
 
     if (
-      postTitle.includes(searchTerm) ||
-      tags.some((tag) => tag.includes(searchTerm)) ||
-      author.includes(searchTerm)
+      searchTerms.some((term) => postTitle.includes(term)) ||
+      searchTerms.some((term) => tags.some((tag) => tag.includes(term))) || // Corrected line
+      searchTerms.some((term) => author.includes(term))
     ) {
       article.style.display = "";
     } else {
