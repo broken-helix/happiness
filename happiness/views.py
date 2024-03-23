@@ -7,6 +7,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 from .forms import PostForm
 from .models import Post
+from django.shortcuts import render
 
 
 class HomeView(TemplateView):
@@ -71,3 +72,22 @@ class PostSuccessPage(generic.TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'about.html'
+
+    def get_context_data(self, **kwargs):
+        team_members = [
+            {'name': 'Darrach', 'photo': 'images/darrach.jpeg', 'happiness': 'Darrach likes to...'},
+            {'name': 'James', 'photo': 'images/james.jpeg', 'happiness': 'I like to....'},
+            {'name': 'Thomas', 'photo': 'images/thomas.jpeg', 'happiness': 'I like to.....'},
+            {'name': 'Alina', 'photo': 'images/teo-alina.png', 'happiness': 'I like to.....'},
+            {'name': 'Fergal', 'photo': 'images/fergal.jpeg', 'happiness': 'I like to.....'},
+            {'name': 'Stefan', 'photo': 'images/stefan.png', 'happiness': 'I like to.....'},
+            {'name': 'Elvis', 'photo': 'images/elvis.jpeg', 'happiness': 'I like to.....'},
+            {'name': 'Monica', 'photo': 'images/monica.png', 'happiness': 'I like to.....'},
+        ]
+
+        context = super().get_context_data(**kwargs)
+        context['team_members'] = team_members
+        return context
+    
+class AllPostsView(TemplateView):
+    template_name = 'allposts.html'
