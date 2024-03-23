@@ -1,8 +1,6 @@
 const searchBar = document.getElementById("searchBar");
 const allPosts = document.querySelectorAll(".post-article");
 
-console.log("allPosts: ", allPosts);
-
 const postArticleArray = Array.from(allPosts);
 
 searchBar.addEventListener("input", (event) => {
