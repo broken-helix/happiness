@@ -91,3 +91,8 @@ class AboutView(TemplateView):
     
 class AllPostsView(TemplateView):
     template_name = 'allposts.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['posts'] = Post.objects.all()  # Fetch all posts
+        return context
