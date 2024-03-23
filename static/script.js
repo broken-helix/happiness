@@ -23,3 +23,10 @@ musicBtn.addEventListener("click", musicToggle);
 // document.addEventListener("DOMContentLoaded", function () {
 //   document.addEventListener("click", playAudioOnce);
 // });
+
+// Alert messages fade out animation
+$(document).ready(function () {
+  setTimeout(function () {
+    $('.alert').fadeOut('slow');
+  }, 3000);
+});

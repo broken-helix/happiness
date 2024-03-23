@@ -96,6 +96,19 @@
           </div>
         </nav>
       </header>
+       <!-- Alert Messages -->
+    <div class="container justify-content-center">
+      <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+              {% for message in messages %}
+              <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'warning' %}alert-danger{% endif %}"
+                  role="alert">
+                  {{ message | safe }}
+              </div>
+              {% endfor %}
+          </div>
+      </div>
+  </div>
 
       <div class="flex-grow-1">{% block content %}{% endblock %}</div>
     </div>
