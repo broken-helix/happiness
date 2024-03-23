@@ -33,7 +33,7 @@ class HomeView(TemplateView):
                 messages.success(request, "Post liked!")
         else:
             messages.error(request, "You need to be logged in to like a post.")
-        return redirect('home')
+        return redirect('allposts')
 
 
 class AddPostPage(generic.CreateView):
