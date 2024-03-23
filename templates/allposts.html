@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'form.css' %}" type="text/css" />
+{% endblock extra_css %}
 
 {% block content %}
+
+<div class='container'>
+<div class="p-3 bg-light rounded rounded-pill shadow-sm mb-4">
+  <div class="input-group">
+    <input id='searchBar' type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+    <div class="input-group-append">
+      <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+
 <div class="container text-center mt-4">
     
     {% for post in posts  %}
@@ -10,3 +28,8 @@
     {% endfor %}
 </div>
 {% endblock %}
+
+
+{% block extra_js %}
+<script  src="{% static 'allposts.js' %}"  /></script>
+{% endblock extra_js %}
