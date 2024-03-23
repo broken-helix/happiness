@@ -1,10 +1,7 @@
 <h1 align="center"><strong> :smiley: World Happiness Day! :smiley: </strong>
-
-<<<<<<< HEAD
-# I am testing my pull  request - Thomas
-# I am testing my pull request - Monica 
-=======
 </h1>
+<h2 align="center">Happy Hacks</h2>
+
 
 <img src="https://res.cloudinary.com/djdefbnij/image/upload/v1709637871/March_hackathon_banner_krwvza.jpg" alt="HackathonHappy" width="1200"/>
 
