@@ -29,7 +29,7 @@
     </div>
   </div>
   <div class="mt-5">
-    <p class="text-secondary"data-title={{post.title}}>{{ post.title }}</p>
+    <p class="text-secondary"data-title="{{post.title}}">{{ post.title }}</p>
     <div class="d-flex flex-row align-items-center justify-center">
       {% for tag in post.tags.all %}
       <span class="badge badge-primary" data-tag={{tag}}>{{ tag }}</span>
