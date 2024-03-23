@@ -7,25 +7,26 @@
         <span>{{ post.created_at }}</span>
       </div>
     </div>
-    {% if user.is_authenticated %}
-    <form class="d-inline" action="{% url 'home' %}" method="POST">
-      {% csrf_token %}
-      <input type="hidden" name="post_id" value="{{ post.id }}">
-        {% if post.user_has_liked %}
-        <button type="submit" class="badge-button">
-          <i class="fa-solid fa-heart"></i>
-        </button>
-        {% else %}
-        <button type="submit" class="badge-button">
-          <i class="fa-regular fa-heart h4 text-danger m-0"></i>
-        </button>
-        {% endif %}
-      </button>
-    </form>
-    {% else %}
-    <span class="text-secondary"><i class="fa-solid fa-heart"></i></span>
-    {% endif %}
-    <span class="text-secondary">{{ post.number_of_likes }}</span>
+    <div class="d-flex flex-row align-items-center">
+      {% if user.is_authenticated %}
+      <form class="d-inline" action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="post_id" value="{{ post.id }}">
+          {% if liked %}
+          <button type="submit" class="badge-button" name="post_id" value="{{post.id}}">
+            <i class="fa-solid fa-heart h4 text-danger m-0"></i>
+          </button>
+          {% else %}
+          <button type="submit" class="badge-button" name="post_id" value="{{post.id}}">
+            <i class="fa-solid fa-heart h4 text-danger m-0"></i>
+          </button>
+          {% endif %}
+      </form>
+      {% else %}
+      <span class="text-secondary"><i class="fa-solid fa-heart h4 text-danger m-0"></i></span>
+      {% endif %}
+      <span class="text-secondary mx-1">{{ post.number_of_likes }}</span>
+    </div>
   </div>
   <div class="mt-5">
     <p class="text-secondary">{{ post.title }}</p>
