@@ -88,3 +88,6 @@ class AboutView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['team_members'] = team_members
         return context
+    
+class AllPostsView(TemplateView):
+    template_name = 'allposts.html'

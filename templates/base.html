@@ -74,6 +74,7 @@
                   {{ user.username }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'allposts' %}">All Posts</a>
                   {% if user.is_superuser %}
                   <a class="dropdown-item" href="{% url 'admin:index' %}">Admin Panel</a>
                   {% endif %}
