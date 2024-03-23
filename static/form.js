@@ -7,6 +7,7 @@ const pickerOptions = { onEmojiSelect: selectEmoji };
 const picker = new EmojiMart.Picker(pickerOptions);
 
 const pickerModel = document.getElementById("emoji-picker").appendChild(picker);
+const tagInput = document.getElementById("id_tags");
 
 pickerModel.style.display = "none";
 
@@ -18,6 +19,7 @@ emojiPickerButton.addEventListener("click", () => {
 
 function selectEmoji(emoji) {
   console.log(emoji);
+  tagInput.value += emoji.keywords;
 
   emojiPickerInput.value += emoji.native;
 }

@@ -27,6 +27,11 @@
     <button type="button" id="emojiPickerButton" class="btn btn-primary">Choose Emoji</button>
   </div>
 
+  <div class="form-group">
+    <label for="id_tags">Tags:</label>
+    {{ form.tags }}
+  </div>
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <div id="emoji-picker"></div>
@@ -35,7 +40,6 @@
 
 
 {% endblock %}
-
 
 {% block postloadjs %}
 {{ block.super }}

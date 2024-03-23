@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import Post
+from .models import Post, Tag
 
 # Register your models here.
 
@@ -35,7 +35,7 @@ class UserAdmin(admin.ModelAdmin):
     """
 
     model = User
-    fields = ("username", "first_name", "last_name", "email")
+    fields = ("username", "first_name", "last_name", "email", 'tags')
     inlines = [PostInline]
 
 #  Register the UserAdmin class with the User model
@@ -60,6 +60,12 @@ class PostAdmin(admin.ModelAdmin):
 
     model = Post
     readonly_fields = ("created_on",)
-    fields = ("title", "author", "emoji", 'created_on')
+    fields = ("title", "author", "emoji", 'created_on', 'tags')
+
+class TagAdmin(admin.ModelAdmin):
+
+    model = Tag
+    fields = ('name',)
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Tag, TagAdmin)

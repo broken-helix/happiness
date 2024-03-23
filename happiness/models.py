@@ -7,6 +7,19 @@ from django.utils.text import slugify
 
 # Create your models here.
 
+class Tag(models.Model):
+    """
+    Model to represent a tag.
+
+    """
+
+    name = models.CharField(max_length=200, unique=True)
+
+    def __str__(self):
+        """Return a string representation of the object (the tag's name)."""
+
+        return str(self.name)
+
 class Post(models.Model):
     """
     Model to represent a blog article.
@@ -20,7 +33,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     emoji = models.CharField(default="😀", max_length=200,)
     created_on = models.DateTimeField(auto_now=True)
-
+    tags = models.ManyToManyField(Tag)
 
     class Meta:
         """To display the posts by created_on in ascending order"""
@@ -36,3 +49,5 @@ class Post(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+
+
