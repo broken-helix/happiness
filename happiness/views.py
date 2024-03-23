@@ -25,12 +25,12 @@ class HomeView(TemplateView):
         if request.user.is_authenticated:
             if post.likes.filter(id=request.user.id).exists():
                 post.likes.remove(request.user)
+                messages.warning(request, "Post unliked!")
             else:
                 post.likes.add(request.user)
-            messages.success(request, "Post liked successfully!")
+                messages.success(request, "Post liked successfully!")
         else:
             messages.error(request, "You need to be logged in to like a post.")
-            liked = None
         return redirect('home')
 
 
