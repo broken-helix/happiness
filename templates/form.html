@@ -5,6 +5,8 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'form.css' %}" type="text/css" />
 {% endblock extra_css %}
+
+
 {% block content %}
 
 
@@ -32,11 +34,13 @@
 <div id="emoji-picker"></div>
 
 
+{% endblock %}
+
+
 
 {% block extra_js %}
 <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
-<script  src="{% static 'form.js' %}"  />
+<script  src="{% static 'form.js' %}"  ></script>
 {% endblock extra_js %}
 
 
-{% endblock %}
