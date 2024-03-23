@@ -1,0 +1,102 @@
+body {
+  font-family: "Roboto Slab", sans-serif;
+  height: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: #f4a261;
+}
+
+/* Styling for the hamburger menu icon */
+.lines-button {
+  color: #264653;
+}
+
+/* Styling for the navigation links */
+.navbar-dark .navbar-nav .nav-link {
+  color: #264653;
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* Styling for dropdown menu */
+.navbar-dark .navbar-nav .nav-item.dropdown.show .nav-link {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+p {
+  color: #264653;
+}
+
+.navbar-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #2a9d8f;
+}
+
+footer {
+  background-color: #f4a261;
+}
+
+/* CARD STYLES */
+
+.c-details span {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px;
+}
+
+.badge-button {
+  background: inherit;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge-button:hover,
+.badge-button:focus {
+  transform: scale(0.9);
+  transition: 200ms ease-in-out;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,37 @@
+<article class="card p-3 mb-2">
+  <div class="d-flex justify-content-between">
+    <div class="d-flex flex-row align-items-center">
+      <div class="icon">&#x1F60A;</div>
+      <div class="mx-2 c-details">
+        <h6 class="mb-0">{{ post.author }}</h6>
+        <span>{{ post.created_at }}</span>
+      </div>
+    </div>
+    <div class="d-flex flex-row align-items-center">
+      {% if user.is_authenticated %}
+      <form class="d-inline" action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="post_id" value="{{ post.id }}">
+          {% if liked %}
+          <button type="submit" class="badge-button" name="post_id" value="{{post.id}}">
+            <i class="fa-solid fa-heart h4 text-danger m-0"></i>
+          </button>
+          {% else %}
+          <button type="submit" class="badge-button" name="post_id" value="{{post.id}}">
+            <i class="fa-solid fa-heart h4 text-danger m-0"></i>
+          </button>
+          {% endif %}
+      </form>
+      {% else %}
+      <span class="text-secondary"><i class="fa-solid fa-heart h4 text-danger m-0"></i></span>
+      {% endif %}
+      <span class="text-secondary mx-1">{{ post.number_of_likes }}</span>
+    </div>
+  </div>
+  <div class="mt-5">
+    <p class="text-secondary">{{ post.title }}</p>
+    <div class="d-flex flex-row align-items-center">
+      <div>{{ post.emoji }}</div>
+    </div>
+  </div>
+</article>

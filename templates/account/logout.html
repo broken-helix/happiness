@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load allauth i18n %}
+{% block head_title %}
+    {% trans "Sign Out" %}
+{% endblock head_title %}
+{% block content %}
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow">
+          <div class="card-body">
+            <h1 class="text-center mb-4">{% trans "Sign Out" %}</h1>
+            <p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
+            {% url 'account_logout' as action_url %}
+            {% element form method="post" action=action_url no_visible_fields=True %}
+              {% slot body %}
+                {% csrf_token %}
+                {% if redirect_field_value %}
+                  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+              {% endslot %}
+              {% slot actions %}
+                <div class="text-center">
+                  {% element button type="submit" tags="btn btn-danger" %}
+                    {% trans 'Sign Out' %}
+                  {% endelement %}
+                </div>
+              {% endslot %}
+            {% endelement %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

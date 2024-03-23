@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brokenhelix-happiness-jfnf7nz4h3b.ws-eu110.gitpod.io', 'happiness-generator-c0a5ad8756d8.herokuapp.com']
+ALLOWED_HOSTS = ['8000-brokenhelix-happiness-jfnf7nz4h3b.ws-eu110.gitpod.io', 'happiness-generator-c0a5ad8756d8.herokuapp.com', 'localhost', '8000-brokenhelix-happiness-pb2obk1d7ae.ws-eu110.gitpod.io']
 
 
 
@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -59,6 +59,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -95,13 +96,13 @@ WSGI_APPLICATION = 'happython.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
- # DATABASES = {
- #     'default': {
- #         'ENGINE': 'django.db.backends.sqlite3',
- #         'NAME': BASE_DIR / 'db.sqlite3',
- #     }
- # }
-    
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.sqlite3',
+#          'NAME': BASE_DIR / 'db.sqlite3',
+#      }
+# }
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
@@ -142,7 +143,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-brokenhelix-happiness-jfnf7nz4h3b.ws-eu110.gitpod.io'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
