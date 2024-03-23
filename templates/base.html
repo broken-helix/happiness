@@ -60,6 +60,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'allposts' %}">All Posts</a>
+              </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
                 <a
@@ -74,7 +77,6 @@
                   {{ user.username }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{% url 'allposts' %}">All Posts</a>
                   {% if user.is_superuser %}
                   <a class="dropdown-item" href="{% url 'admin:index' %}">Admin Panel</a>
                   {% endif %}
