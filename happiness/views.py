@@ -2,13 +2,14 @@ from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
 from django.contrib import messages
-from django.shortcuts import get_object_or_404, redirect, render
-from django.http import JsonResponse
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
+from django.http import JsonResponse
 from django.views import generic
 import random
 from .forms import PostForm
 from .models import Post
+from django.shortcuts import render
 
 
 class HomeView(TemplateView):
@@ -75,8 +76,30 @@ class PostSuccessPage(generic.TemplateView):
 class AboutView(TemplateView):
     template_name = 'about.html'
 
+    def get_context_data(self, **kwargs):
+        team_members = [
+            {'name': 'Darrach', 'photo': 'images/darrach.jpeg', 'happiness': 'Darrach likes to...'},
+            {'name': 'James', 'photo': 'images/james.jpeg', 'happiness': 'I like to....'},
+            {'name': 'Thomas', 'photo': 'images/thomas.jpeg', 'happiness': 'I like to.....'},
+            {'name': 'Alina', 'photo': 'images/teo-alina.png', 'happiness': 'I like to.....'},
+            {'name': 'Fergal', 'photo': 'images/fergal.jpeg', 'happiness': 'I like to.....'},
+            {'name': 'Stefan', 'photo': 'images/stefan.png', 'happiness': 'I like to.....'},
+            {'name': 'Elvis', 'photo': 'images/elvis.jpeg', 'happiness': 'I like to.....'},
+            {'name': 'Monica', 'photo': 'images/monica.png', 'happiness': 'I like to.....'},
+        ]
 
-from django.contrib.auth.models import User  # Import the User model
+        context = super().get_context_data(**kwargs)
+        context['team_members'] = team_members
+        return context
+    
+class AllPostsView(TemplateView):
+    template_name = 'allposts.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['posts'] = Post.objects.all()  # Fetch all posts
+        return context
+
 
 class RandomPostView(TemplateView):
     template_name = 'random_posts.html'

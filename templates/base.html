@@ -60,6 +60,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'about' %}">About</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'allposts' %}">All Posts</a>
+              </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
                 <a
@@ -121,13 +124,14 @@
       <i class="fa-solid fa-music"></i>
     </button>
     <!-- Footer -->
-    <footer class="footer text-white py-3">
-      <div class="container">
-        <div class="text-center">
-          <p>This will be a footer, it is located in base.html</p>
-        </div>
-      </div>
-    </footer>
+<footer class="footer py-3">
+  <div class="container">
+    <div class="text-center">
+      <p id="footer-date"  style="font-weight: bold;"></p>
+      <p id="footer-message"  style="font-weight: bold;"></p>
+    </div>
+  </div>
+</footer>
     
     <script
     src="https://kit.fontawesome.com/27545168c5.js"
