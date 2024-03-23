@@ -2,11 +2,7 @@
 
 {% block content %}
 <div class="container text-center">
-    
-    {% for post in posts  %}
 
-    {% include "includes/postcard.html" with post=post %}
-    
-    {% endfor %}
+    {% include "includes/random_posts.html" %}
 </div>
 {% endblock %}
