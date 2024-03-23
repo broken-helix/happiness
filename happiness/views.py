@@ -68,3 +68,6 @@ class PostSuccessPage(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.all()
         return context
+
+class AboutView(TemplateView):
+    template_name = 'about.html'
