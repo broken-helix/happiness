@@ -2,9 +2,11 @@ from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
 from django.contrib import messages
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
+from django.http import JsonResponse
 from django.urls import reverse_lazy
 from django.views import generic
+import random
 from .forms import PostForm
 from .models import Post
 
@@ -24,9 +26,10 @@ class HomeView(TemplateView):
         if request.user.is_authenticated:
             if post.likes.filter(id=request.user.id).exists():
                 post.likes.remove(request.user)
+                messages.info(request, "Post unliked!")
             else:
                 post.likes.add(request.user)
-            messages.success(request, "Post liked successfully!")
+                messages.success(request, "Post liked!")
         else:
             messages.error(request, "You need to be logged in to like a post.")
             liked = None
@@ -71,3 +74,22 @@ class PostSuccessPage(generic.TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'about.html'
+
+
+from django.contrib.auth.models import User  # Import the User model
+
+class RandomPostView(TemplateView):
+    template_name = 'random_posts.html'
+
+    def generate_random_post(self):
+        all_posts = Post.objects.all()
+        random_post = random.choice(all_posts)
+        return random_post
+
+    def post(self, request, *args, **kwargs):
+        random_post = self.generate_random_post()
+        return JsonResponse({
+            'title': random_post.title,
+            'emoji': random_post.emoji,
+            'author': random_post.author.username,
+        })

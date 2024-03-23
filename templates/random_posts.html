@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'random_post.css' %}" type="text/css" />
+{% endblock extra_css %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h1 class="mb-4 mt-3">Happy Hack Generator</h1>
+    <p class="description">Click here to generate happiness, one post at a time!</p>
+    <div id="random-post" class="mb-4">
+        <div class="card-body">
+            <h2 class="card-title">{{ random_post.title }}</h2>
+            <p class="card-text">{{ random_post.emoji }}</p>
+            <p class="card-text">{{ random_post.author }}</p>
+        </div>
+    </div>
+    <button type="button" onclick="generateRandomPost()" class="btn btn-primary">Generate Random Post</button>
+
+</div>
+    {% csrf_token %}
+    {% load static %}
+    
+    {% block extra_js %}
+    <script src="{% static 'random_post.js' %}"></script>
+    {% endblock extra_js %}
+{% endblock %}
