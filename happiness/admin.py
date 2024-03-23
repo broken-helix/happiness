@@ -14,7 +14,7 @@ class PostInline(admin.TabularInline):
 
     model = Post
     readonly_fields = ("created_on",)
-    fields = ("title", "author", "emoji", 'created_on')
+    fields = ("title", "author", "emoji", 'created_on',)
     extra = 0
 
 
@@ -60,6 +60,6 @@ class PostAdmin(admin.ModelAdmin):
 
     model = Post
     readonly_fields = ("created_on",)
-    fields = ("title", "author", "emoji", 'created_on')
+    fields = ("title", "author", "emoji", 'created_on', 'tags')
 
 admin.site.register(Post, PostAdmin)
