@@ -1,5 +1,9 @@
 <h1 align="center"><strong> :smiley: World Happiness Day! :smiley: </strong>
 
+<<<<<<< HEAD
+# I am testing my pull  request - Thomas
+# I am testing my pull request - Monica 
+=======
 </h1>
 
 <img src="https://res.cloudinary.com/djdefbnij/image/upload/v1709637871/March_hackathon_banner_krwvza.jpg" alt="HackathonHappy" width="1200"/>
@@ -45,3 +49,4 @@ In the tech section, we provide information about the technology stack, dependen
 ## Credits
 
 In the credits section, we provide information about the sources used
+>>>>>>> main
