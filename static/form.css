@@ -1,5 +1,6 @@
 .form-control:focus {
   box-shadow: none;
+  color: #2A9D8F;
 }
 
 .form-control-underlined {
@@ -7,6 +8,7 @@
   border-bottom-width: 1px;
   border-radius: 0;
   padding-left: 0;
+  border-color: #2A9D8F;
 }
 
 .form-control::placeholder {
@@ -14,3 +16,80 @@
   color: #aaa;
   font-style: italic;
 }
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  color: #2A9D8F;
+  padding-bottom: 20px;
+  letter-spacing: 0.3rem;
+  font-size: 2.6rem;
+}
+
+p {
+  font-family: 'Roboto Slab';
+  letter-spacing: 0.1rem;
+  padding-bottom: 20px;
+  font-size: 1.1rem;
+
+}
+
+label {
+  font-family: "Quicksand", sans-serif;
+  padding-bottom: 20px;
+  letter-spacing: 0.1rem;
+}
+
+#emoji {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+#emojiPickerButton {
+  border: none;
+  border-radius: 20px;
+  background-color: #E9C46A;
+  color: #264653;
+  outline: none;
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-size: 15px;
+  outline: none;
+}
+
+#emojiPickerButton:hover {
+  background-color: #e76f51;
+  color: #ffff;
+  outline: none;
+}
+
+#emojiPickerButton:focus {
+  background-color: #e76f51;
+  color: #264653;
+  outline: none;
+}
+
+
+.btn.btn-primary.btn-block {
+  background-color: #E9C46A;
+  border: none;
+  border-radius: 20px;
+  color: #264653;
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  outline: none;
+}
+
+.btn.btn-primary.btn-block:hover {
+  background-color: #e76f51;
+  color: #ffff;
+  outline: none;
+}
+
+.btn.btn-primary.btn-block:focus {
+  background-color: #e76f51;
+  color: #ffff;
+  outline: none;
+}
+
+

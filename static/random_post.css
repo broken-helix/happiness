@@ -44,9 +44,17 @@ h1 {
     font-family: 'Roboto Slab';
     font-weight: bold;
     letter-spacing: 0.1rem;
+    outline: none;
 }
 
 .btn-primary:hover {
     background-color: #e76f51;
     color: #ffff;
+    outline: none;
+}
+
+.btn-primary:focus {
+    background-color: #e76f51;
+    color: #ffff;
+    outline: none;
 }
