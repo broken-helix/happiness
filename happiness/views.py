@@ -26,7 +26,7 @@ class HomeView(TemplateView):
                 post.likes.remove(request.user)
             else:
                 post.likes.add(request.user)
-            messages.success(request, "Post liked/unliked successfully!")
+            messages.success(request, "Post liked successfully!")
         else:
             messages.error(request, "You need to be logged in to like a post.")
             liked = None

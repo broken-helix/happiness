@@ -34,6 +34,7 @@ class Post(models.Model):
     emoji = models.CharField(default="😀", max_length=200,)
     created_on = models.DateTimeField(auto_now=True)
     tags = models.ManyToManyField(Tag)
+    likes = models.ManyToManyField(User, related_name="post_likes", blank=True)
 
     class Meta:
         """To display the posts by created_on in ascending order"""
@@ -49,3 +50,10 @@ class Post(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+
+    
+    def user_has_liked(self, user):
+        return self.likes.filter(id=user.id).exists()
+
+    def number_of_likes(self):
+        return self.likes.count()
