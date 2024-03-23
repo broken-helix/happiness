@@ -1,0 +1,142 @@
+[
+  {
+    "model": "happiness.tag",
+    "pk": 1,
+    "fields": {
+      "name": "smile"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 2,
+    "fields": {
+      "name": "nature"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 3,
+    "fields": {
+      "name": "food"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 4,
+    "fields": {
+      "name": "travel"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 5,
+    "fields": {
+      "name": "music"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 6,
+    "fields": {
+      "name": "art"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 7,
+    "fields": {
+      "name": "sports"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 8,
+    "fields": {
+      "name": "technology"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 9,
+    "fields": {
+      "name": "science"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 10,
+    "fields": {
+      "name": "health"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 11,
+    "fields": {
+      "name": "education"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 12,
+    "fields": {
+      "name": "fashion"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 13,
+    "fields": {
+      "name": "books"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 14,
+    "fields": {
+      "name": "movies"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 15,
+    "fields": {
+      "name": "games"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 16,
+    "fields": {
+      "name": "animals"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 17,
+    "fields": {
+      "name": "photography"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 18,
+    "fields": {
+      "name": "fitness"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 19,
+    "fields": {
+      "name": "diy"
+    }
+  },
+  {
+    "model": "happiness.tag",
+    "pk": 20,
+    "fields": {
+      "name": "cooking"
+    }
+  }
+]

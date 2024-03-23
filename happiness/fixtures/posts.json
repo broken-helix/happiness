@@ -1,0 +1,170 @@
+[
+  {
+    "model": "happiness.post",
+    "pk": 1,
+    "fields": {
+      "title": "Sunny Day",
+      "author": 1,
+      "slug": "aefc8b71-e572-4fc7-baa1-3a843e365c4a",
+      "created_on": "2022-01-01T00:00:00Z",
+      "emoji": "&#x1F60A;",
+      "tags": [1, 2]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 2,
+    "fields": {
+      "title": "Laughing Out Loud",
+      "author": 1,
+      "slug": "e9cb2a29-ff26-4e29-a8d7-f40af9b362f6",
+      "created_on": "2022-01-02T00:00:00Z",
+      "emoji": "&#x1F604;",
+      "tags": [1, 3]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 3,
+    "fields": {
+      "title": "Joyful Moments",
+      "author": 1,
+      "slug": "8ec44b8e-c75b-4f17-819f-73a6e587fffb",
+      "created_on": "2022-01-03T00:00:00Z",
+      "emoji": "&#x2B50;",
+      "tags": [2, 4]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 4,
+    "fields": {
+      "title": "Feeling Happy",
+      "author": 1,
+      "slug": "6f4c19fd-7c6a-4969-8e6b-b37881c4d46d",
+      "created_on": "2022-01-04T00:00:00Z",
+      "emoji": "&#x1F600;",
+      "tags": [1, 5]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 5,
+    "fields": {
+      "title": "Bright Smiles",
+      "author": 1,
+      "slug": "e1a7f53a-99d0-4c17-b479-38b00c6c4f8c",
+      "created_on": "2022-01-05T00:00:00Z",
+      "emoji": "&#x1F60A;",
+      "tags": [2, 6]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 6,
+    "fields": {
+      "title": "Happiness Everywhere",
+      "author": 1,
+      "slug": "b18d68e3-fc20-4b7f-a874-d0a5a672d65d",
+      "created_on": "2022-01-06T00:00:00Z",
+      "emoji": "&#x1F308;",
+      "tags": [1, 7]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 7,
+    "fields": {
+      "title": "Radiant Smiles",
+      "author": 1,
+      "slug": "a398e3c8-b518-4b3a-8a3f-34e4b8640498",
+      "created_on": "2022-01-07T00:00:00Z",
+      "emoji": "&#x1F601;",
+      "tags": [2, 8]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 8,
+    "fields": {
+      "title": "Happy Times",
+      "author": 1,
+      "slug": "1b0df70f-7911-4922-83f7-b4cb3e476f2d",
+      "created_on": "2022-01-08T00:00:00Z",
+      "emoji": "&#x1F603;",
+      "tags": [1, 9]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 9,
+    "fields": {
+      "title": "Excited Feelings",
+      "author": 1,
+      "slug": "f79b9b81-71f5-45b5-85b7-df9c2288c78f",
+      "created_on": "2022-01-09T00:00:00Z",
+      "emoji": "&#x1F606;",
+      "tags": [2, 10]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 10,
+    "fields": {
+      "title": "Cheerful Hearts",
+      "author": 1,
+      "slug": "be6f7c79-b316-4db2-bc1b-5424e32d6b8d",
+      "created_on": "2022-01-10T00:00:00Z",
+      "emoji": "&#x1F389;",
+      "tags": [1, 11]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 11,
+    "fields": {
+      "title": "Grinning Faces",
+      "author": 1,
+      "slug": "b2db4407-9a3d-4e2b-a63e-9ee8e066367b",
+      "created_on": "2022-01-11T00:00:00Z",
+      "emoji": "&#x1F60D;",
+      "tags": [2, 12]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 12,
+    "fields": {
+      "title": "Optimistic Vibes",
+      "author": 1,
+      "slug": "06e376c1-54b2-4678-bb98-02e71b6db442",
+      "created_on": "2022-01-12T00:00:00Z",
+      "emoji": "&#x1F44C;",
+      "tags": [1, 13]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 13,
+    "fields": {
+      "title": "Happy Dance",
+      "author": 1,
+      "slug": "bf30825c-92a0-4b92-a6b0-116caaf0a4cb",
+      "created_on": "2022-01-13T00:00:00Z",
+      "emoji": "&#x1F483;",
+      "tags": [2, 14]
+    }
+  },
+  {
+    "model": "happiness.post",
+    "pk": 14,
+    "fields": {
+      "title": "Smiling Souls",
+      "author": 1,
+      "slug": "2e7ddfc7-fc12-42ab-8fb0-d7cf1a50f299",
+      "created_on": "2022-01-14T00:00:00Z",
+      "emoji": "&#x1F604;",
+      "tags": [1, 15]
+    }
+  }
+]
