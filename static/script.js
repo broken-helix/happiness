@@ -15,11 +15,18 @@ const musicToggle = () => {
 
 musicBtn.addEventListener("click", musicToggle);
 
-const playAudioOnce = () => {
-  musicToggle();
-  document.removeEventListener("click", playAudioOnce);
-};
+// const playAudioOnce = () => {
+//   musicToggle();
+//   document.removeEventListener("click", playAudioOnce);
+// };
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.addEventListener("click", playAudioOnce);
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.addEventListener("click", playAudioOnce);
+// });
+
+// Alert messages fade out animation
+$(document).ready(function () {
+  setTimeout(function () {
+    $('.alert').fadeOut('slow');
+  }, 3000);
 });
