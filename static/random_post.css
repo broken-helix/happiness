@@ -1,0 +1,52 @@
+.container.mt-5 {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #2A9D8F;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+ p {
+    color: #fff;
+    font-family: 'Roboto Slab';
+    letter-spacing: 0.1rem;
+
+}
+
+.description {
+    padding-top: 40px;
+    font-size: 1.1rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+}
+
+.card-title {
+    font-family: "Roboto Slab", sans-serif;
+    color: #ffff;
+    padding-bottom: 20px;
+    letter-spacing: 0.1rem;
+    font-size: 1.7rem;
+}
+
+.btn-primary {
+    background-color: #E9C46A;
+    border: none;
+    border-radius: 20px;
+    color: #264653;
+    font-family: 'Roboto Slab';
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.btn-primary:hover {
+    background-color: #e76f51;
+    color: #ffff;
+}
