@@ -33,7 +33,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-brokenhelix-happiness-jfnf7nz4h3b.ws-eu110.gitpod.io', 'happiness-generator-c0a5ad8756d8.herokuapp.com', 'localhost', '8000-brokenhelix-happiness-pb2obk1d7ae.ws-eu110.gitpod.io', '8000-brokenhelix-happiness-788n5gtfo9t.ws-eu110.gitpod.io']
->>>>>>> d3a830bbd1e786c0493f7f1b9a37604afc196d9d
 
 
 
