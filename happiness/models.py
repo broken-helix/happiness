@@ -3,10 +3,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-
+import uuid
 
 # Create your models here.
-
 class Tag(models.Model):
     """
     Model to represent a tag.
@@ -28,7 +27,7 @@ class Post(models.Model):
     attributes such as title, author, content, and likes.
     """
 
-    title = models.CharField(max_length=200, unique=True,)
+    title = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=200, unique=True)
     emoji = models.CharField(default="😀", max_length=200,)
@@ -48,10 +47,11 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title)
+            unique_id = uuid.uuid4()
+            uuid_string = str(unique_id)
+            self.slug = slugify(uuid_string)
         super().save(*args, **kwargs)
 
-    
     def user_has_liked(self, user):
         return self.likes.filter(id=user.id).exists()
 
