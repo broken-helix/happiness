@@ -22,7 +22,6 @@ p.about-subtitle {
 p.card-text,
 .list-group-item {
     color: #264653;
-    letter-spacing: 0.1rem;
     padding-top: 20px;
 }
 
@@ -62,8 +61,7 @@ p.card-text,
 .card-title {
     background-color:#2A9D8F;
     color: white;
-    padding-bottom: 10px;
-    letter-spacing: 0.1rem;
+    padding: 10px;
 }
 
 .margins {
