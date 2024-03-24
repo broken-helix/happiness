@@ -1,4 +1,16 @@
+const bloop = new Audio("/static/audio/bloop.mp3");
+const box = new Audio("/static/audio/box.mp3");
+const cat = new Audio("/static/audio/cat.mp3");
+const pop = new Audio("/static/audio/pop.mp3");
+const wee = new Audio("/static/audio/wee.mp3");
+const wow = new Audio("/static/audio/wow.mp3");
+
+const audioArray = [bloop, box, cat, pop, wee, wow];
+
 function generateRandomPost() {
+  const randomIndex = Math.floor(Math.random() * audioArray.length);
+  const soundEffect = audioArray[randomIndex];
+  soundEffect.play();
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "/random-posts/", true);
   xhr.setRequestHeader("Content-Type", "application/json");
