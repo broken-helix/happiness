@@ -9,25 +9,16 @@
         <span>{{ post.created_at }}</span>
       </div>
     </div>
-    <div class="d-flex flex-row align-items-center">
-      {% if user.is_authenticated %}
-      <form class="d-inline" action="{% url 'home' %}" method="POST">
-        {% csrf_token %}
-        <input type="hidden" name="post_id" value="{{ post.id }}">
-          {% if liked %}
-          <button type="submit" class="badge-button" name="post_id" value="{{post.id}}">
-            <i class="fa-solid fa-heart h4 text-danger m-0"></i>
-          </button>
-          {% else %}
-          <button type="submit" class="badge-button" name="post_id" value="{{post.id}}">
-            <i class="fa-solid fa-heart h4 text-danger m-0"></i>
-          </button>
-          {% endif %}
-      </form>
-      {% else %}
-      <span class="text-secondary"><i class="fa-solid fa-heart h4 text-danger m-0"></i></span>
-      {% endif %}
-      <span class="text-secondary mx-1">{{ post.number_of_likes }}</span>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton{{ post.id }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-regular fa-pen-to-square"></i>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ post.id }}">
+        {% if user.is_authenticated and post.author == user %}
+        <a class="dropdown-item" href="{% url 'update_post' post.pk %}">Edit</a>
+        <a class="dropdown-item" href="{% url 'delete_post' post.pk %}">Delete</a>
+        {% endif %}
+      </div>
     </div>
   </div>
   <div class="mt-5">
