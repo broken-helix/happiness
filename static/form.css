@@ -3,6 +3,10 @@
   color: #2A9D8F;
 }
 
+.custom-form {
+  border-radius: 20px;
+}
+
 .form-control-underlined {
   border-width: 0;
   border-bottom-width: 1px;
@@ -17,19 +21,26 @@
   font-style: italic;
 }
 
+.container.mt-5 {
+  background-color: #2A9D8F;
+  border-radius: 30px;
+  padding: 50px 20px;
+}
+
 h2 {
   font-family: "Quicksand", sans-serif;
-  color: #2A9D8F;
+  color: #ededed;
   padding-bottom: 20px;
   letter-spacing: 0.3rem;
-  font-size: 2.6rem;
+  font-size: 2.9rem;
 }
 
 p {
   font-family: 'Roboto Slab';
   letter-spacing: 0.1rem;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   font-size: 1.1rem;
+  color: #ededed;
 
 }
 
