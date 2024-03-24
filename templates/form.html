@@ -15,8 +15,8 @@
                 {% csrf_token %}
 
                 <div class="form-group {% if form.title.errors %}has-error{% endif %}">
-                    <label for="id_title" class="text-center d-block">Content:</label>
-                    <textarea id="id_title" name="title" class="form-control {% if form.title.errors %}is-invalid{% endif %}"></textarea>
+                    <label for="id_title" class="text-center d-block"></label>
+                    <textarea id="id_title" name="title" class="form-control {% if form.title.errors %}is-invalid{% endif %}" onfocus="clearTextarea()">To make myself happy I like to...</textarea>
                     {% for error in form.title.errors %}
                         <div class="invalid-feedback">{{ error }}</div>
                     {% endfor %}
