@@ -173,7 +173,7 @@ footer {
 
 /* Form style for login/sign in/ sign out */
 
-.btn.btn-primary.btn-block {
+.account-button button[type="submit"] {
   background-color: #e9c46a;
   border: none;
   border-radius: 20px;
@@ -182,9 +182,10 @@ footer {
   font-weight: bold;
   letter-spacing: 0.1rem;
   outline: none;
+  width: 100%;
 }
 
-.btn.btn-primary.btn-block:hover {
+.account-button button[type="submit"]:hover {
   background-color: #e76f51;
   color: #ffff;
   outline: none;
@@ -196,29 +197,44 @@ footer {
   outline: none;
 }
 
-.account-link {
-  color: #264653;
-  font-weight: 700;
-}
-
-.account-link:hover {
-  color: #ffff;
-}
-
-.account-form,
-.account-form input,
-.account-form label {
-  color: #ffff;
-}
-
-.my-form {
-  color: #ffff;
-}
-
 .form-background {
   background-color: #2a9d8f;
+  border-radius: 30px;
+  background-color: rgb(42, 157, 143, 0.6);
+  padding: 50px 20px;
+  margin-bottom: 40px;
 }
 
-.question {
-  color: #264653;
+.account-templates h1,
+.account-templates label,
+.account-templates p {
+  color: #ffff;
+}
+
+.form-header {
+  font-family: "Quicksand", sans-serif;
+  color: #ededed;
+  padding-bottom: 20px;
+  letter-spacing: 0.3rem;
+  font-size: 2.9rem;
+}
+
+.form-span {
+  color: #e9c46a;
+}
+
+.form-span:hover {
+  color: #e76f51;
+}
+
+.account-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center; 
+  margin: 0 auto; 
+  max-width: 600px;
+  padding: 20px;
+  color: #ededed;
+  font-weight: 700
 }
