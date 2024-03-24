@@ -13,7 +13,6 @@ class PostForm(forms.ModelForm):
         required=False,
     )
 
-
     class Meta:
         """Get post model, choose fields to display"""
 

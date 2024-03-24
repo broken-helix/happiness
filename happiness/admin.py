@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import Post
+from .models import Post, Tag
 
 # Register your models here.
 
@@ -62,4 +62,19 @@ class PostAdmin(admin.ModelAdmin):
     readonly_fields = ("created_on",)
     fields = ("title", "author", "emoji", 'created_on', 'tags')
 
+
+class TagAdmin(admin.ModelAdmin):
+    """
+    Admin model configuration for user accounts.
+
+    This class defines the  admin panel configuration for user accounts,
+
+    """
+
+
+    model = Tag 
+    fields = ("name",)
+
 admin.site.register(Post, PostAdmin)
+admin.site.register(Tag, TagAdmin)
+

@@ -67,6 +67,12 @@ p {
   border: 2px solid #2a9d8f;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
 .stroke {
   font-family: "Lilita One", sans-serif;
   -webkit-text-stroke-width: 2px;

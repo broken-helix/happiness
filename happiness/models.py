@@ -30,7 +30,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=200, unique=True)
-    emoji = models.CharField(default="😀", max_length=200,)
+    emoji = models.CharField(default="😀", max_length=1,)
     created_on = models.DateTimeField(auto_now=True)
     tags = models.ManyToManyField(Tag)
     likes = models.ManyToManyField(User, related_name="post_likes", blank=True)

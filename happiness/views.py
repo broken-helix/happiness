@@ -140,7 +140,8 @@ class AboutView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['team_members'] = team_members
         return context
- 
+
+
 class AllPostsView(TemplateView):
     template_name = 'allposts.html'
 
@@ -149,13 +150,15 @@ class AllPostsView(TemplateView):
         posts = Post.objects.all()
         context['posts'] = posts
 
-        emojis = set()
+        emojis = []
         for post in posts:
-            for emoji in post.emoji:
-                emojis.add(emoji)
+            emojis.append(post.emoji)
+        print(emojis)
         context['emojis'] = emojis
 
         return context
+
+
 class RandomPostView(TemplateView):
     template_name = 'random_posts.html'
 
