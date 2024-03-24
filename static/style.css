@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
 :root {
   --clr-yellow: #e9c46a;
   --clr-orange: #f4a261;
@@ -63,6 +65,14 @@ p {
   height: auto;
   border-radius: 50%;
   border: 2px solid #2a9d8f;
+}
+
+.stroke {
+  font-family: "Lilita One", sans-serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.9);
+  font-weight: bolder;
+  font-size: clamp(2rem, 7vw, 3.5rem) !important;
 }
 
 footer {
