@@ -7,6 +7,9 @@ $(document).ready(function () {
 
 // Function to get a random happiness message
 function getRandomHappinessMessage() {
+  const randomIndex = Math.floor(Math.random() * audioArray.length);
+  const soundEffect = audioArray[randomIndex];
+  soundEffect.play();
   const messages = [
     "Spread joy wherever you go!",
     "Happiness is a choice. Choose it!",
