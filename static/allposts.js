@@ -6,6 +6,8 @@ const pop = new Audio("/static/audio/pop.mp3");
 const wee = new Audio("/static/audio/wee.mp3");
 const wow = new Audio("/static/audio/wow.mp3");
 
+console.log(bloop);
+
 const audioArray = [bloop, box, cat, pop, wee, wow];
 
 // FUSE PACKAGE OPTIONS
@@ -82,6 +84,8 @@ function searchPosts(searchTerm, posts) {
       allPostsContainer.appendChild(post);
     }
   });
+
+  console.log(filteredPosts);
 
   Array.from(allPostsContainer.children).forEach((post) => {
     if (
