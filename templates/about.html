@@ -18,12 +18,12 @@
 
 .round {
     border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(42, 157, 143, 1);
 }
 
-.card-link {
+.card-link,
+.fa-clipboard-check {
     color: #2A9D8F;
-    text-align: left;
-
 }
 
 .card {
@@ -48,7 +48,6 @@
     margin-top: 120px;
 }
 
-
 </style>
 
 <div class="background-image-container"></div>
@@ -69,10 +68,10 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">{{ member.name }}</h5>
-                            <p class="card-text">{{ member.happiness }}</p>
+                            <p class="card-text">"{{ member.happiness }}"</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ member.role }}</li>
+                            <li class="list-group-item"><i class="fa-solid fa-clipboard-check"></i> {{ member.role }}</li>
                         </ul>
                         <div class="card-body">
                             <a href="{{ member.linkedin }}" class="card-link" target="_blank"> <i
