@@ -13,14 +13,29 @@
             <p class="text-center">Add your joyous thoughts, inspiring words, or delightful actions here. Let happiness flow through your words, and don't forget to add an emoji to add an extra dash of cheer!</p>
             <form method="post" enctype="multipart/form-data" class="custom-form p-lg-4 p-2 pt-4 rounded-2 shadow-lg bg-white my-3">
                 {% csrf_token %}
-                <div class="form-group">
-                    <label for="id_content" class="text-center d-block"></label>
-                    <textarea id="content" name="content" class="form-control" onfocus="clearTextarea()">To make myself happy I like to...</textarea>
+
+                <div class="form-group {% if form.title.errors %}has-error{% endif %}">
+                    <label for="id_title" class="text-center d-block">Content:</label>
+                    <textarea id="id_title" name="title" class="form-control {% if form.title.errors %}is-invalid{% endif %}"></textarea>
+                    {% for error in form.title.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
                 </div>
-                
-                <div class="form-group d-flex align-items-center">
-                    <input type="text" id="emoji" name="emoji" class="form-control mr-2">
+               
+                <div class="form-group d-flex align-items-center {% if form.emoji.errors %}has-error{% endif %}">
+                    <input type="text" id="id_emoji" name="emoji" class="form-control mr-2 {% if form.emoji.errors %}is-invalid{% endif %}">
+                    {% for error in form.emoji.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
                     <button type="button" id="emojiPickerButton" class="btn btn-primary">Choose Emoji</button>
+                </div>
+
+                <div class="form-group hidden {% if form.tags.errors %}has-error{% endif %}">
+                    <label for="id_tags" class="text-center d-block">Tags:</label>
+                    <input id="id_tags" name="tags" class="form-control {% if form.tags.errors %}is-invalid{% endif %}">
+                    {% for error in form.tags.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
@@ -28,6 +43,10 @@
         </div>
     </div>
 </div>
+
+
+
+<div id="overlay"></div>
 <div id="emoji-picker"></div>
 {% endblock %}
 

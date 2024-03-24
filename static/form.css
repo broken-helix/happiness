@@ -1,6 +1,6 @@
 .form-control:focus {
   box-shadow: none;
-  color: #2A9D8F;
+  color: #2a9d8f;
 }
 
 .custom-form {
@@ -12,7 +12,7 @@
   border-bottom-width: 1px;
   border-radius: 0;
   padding-left: 0;
-  border-color: #2A9D8F;
+  border-color: #2a9d8f;
 }
 
 .form-control::placeholder {
@@ -22,7 +22,7 @@
 }
 
 .container.mt-5 {
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   border-radius: 30px;
   padding: 50px 20px;
 }
@@ -36,12 +36,11 @@ h2 {
 }
 
 p {
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   letter-spacing: 0.1rem;
   padding-bottom: 40px;
   font-size: 1.1rem;
   color: #ededed;
-
 }
 
 label {
@@ -57,10 +56,10 @@ label {
 #emojiPickerButton {
   border: none;
   border-radius: 20px;
-  background-color: #E9C46A;
+  background-color: #e9c46a;
   color: #264653;
   outline: none;
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   font-weight: bold;
   letter-spacing: 0.1rem;
   font-size: 15px;
@@ -79,13 +78,12 @@ label {
   outline: none;
 }
 
-
 .btn.btn-primary.btn-block {
-  background-color: #E9C46A;
+  background-color: #e9c46a;
   border: none;
   border-radius: 20px;
   color: #264653;
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   font-weight: bold;
   letter-spacing: 0.1rem;
   outline: none;
@@ -103,4 +101,23 @@ label {
   outline: none;
 }
 
+#emoji-picker {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
 
+#overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  filter: blur(2px);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
