@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'about.css' %}" type="text/css" />
+{% endblock extra_css %}
+
 
 {% block content %}
 
-<div class="about-container">
-    <div class="container text-center margins">
 <div class="about-container">
     <div class="container text-center margins">
     
