@@ -1,7 +1,9 @@
-<article class="card p-3 mb-2 post-article">
+<article class="mb-2 post-article col-lg-6 col-md-6 col-sm-12">
+
+  <div class='card m-1 p-3'>
   <div class="d-flex justify-content-between">
     <div class="d-flex flex-row align-items-center">
-      <div class="icon">{{ post.emoji|safe }}</div>
+      <div class="icon" data-author="{{post.emoji}}">{{ post.emoji|safe }}</div>
       <div class="mx-2 c-details">
         <h6 class="mb-0" data-author="{{post.author}}">{{ post.author }}</h6>
         <span>{{ post.created_at }}</span>
@@ -36,4 +38,5 @@
     {% endfor %} 
   </div>
   </div>
+  <div>
 </article>

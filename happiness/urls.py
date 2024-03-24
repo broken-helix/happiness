@@ -7,6 +7,5 @@ urlpatterns = [
     path("post-success", PostSuccessPage.as_view(), name="post_success"),
     path("about/", AboutView.as_view(), name="about"),
     path('random-posts/', RandomPostView.as_view(), name='random_posts'),
-    path("allposts", AllPostsView.as_view(), name="allposts"),
+    path("all-posts", AllPostsView.as_view(), name="allposts"),
 ]
-
