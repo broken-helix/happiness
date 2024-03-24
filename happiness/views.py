@@ -111,6 +111,14 @@ class AboutView(TemplateView):
                 'github': '/'
             },
             {
+                'name': 'Monica',
+                'photo': 'images/monica.png',
+                'role': 'Hackaton Newbie',
+                'happiness': 'It brings me joy to assist others and see the happiness I can bring into their lives.',
+                'linkedin': 'https://www.linkedin.com/in/monica-iancu-362825137/',
+                'github': 'https://github.com/Monicaular'
+            },
+            {
                 'name': 'Fergal',
                 'photo': 'images/fergal.jpeg',
                 'role': 'text','happiness': 'I like to.....',
@@ -133,14 +141,6 @@ class AboutView(TemplateView):
                 'linkedin': '/',
                 'github': '/'
             },
-            {
-                'name': 'Monica',
-                'photo': 'images/monica.png',
-                'role': 'Hackaton Newbie',
-                'happiness': 'It brings me joy to assist others and see the happiness I can bring into their lives.',
-                'linkedin': 'https://www.linkedin.com/in/monica-iancu-362825137/',
-                'github': 'https://github.com/Monicaular'
-                },
         ]
 
         context = super().get_context_data(**kwargs)
