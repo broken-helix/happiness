@@ -1,12 +1,23 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
-
 {% block content %}
-    <h1>Update Post</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Update Post</button>
-    </form>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow form-background">
+          <div class="card-body account-templates">
+            <h1 class="text-center mb-4 form-header stroke">Update Post</h1>
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <div class="text-center account-button">
+                <button type="submit" class="btn btn-primary btn-block mt-4">Update Post</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
