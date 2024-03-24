@@ -10,14 +10,24 @@
 
     <div class="row">
         {% for member in team_members %}
-        <div class="col-md-4">
-            <img src="{% static member.photo %}" alt="{{ member.name }}">
-            <h2>{{ member.name }}</h2>
-            <p>{{ member.happiness }}</p>
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static member.photo %}" class="card-img-top" alt="{{ member.name }}">
+                <div class="card-body">
+                <h5 class="card-title">{{ member.name }}</h5>
+                <p class="card-text">{{ member.happiness }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ member.role }}</li>
+                </ul>
+                <div class="card-body">
+                <a href="{{ member.linkedin }}" class="card-link" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="{{ member.github }}" class="card-link" target="_blank"> <i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
         </div>
         {% endfor %}
     </div>
-    
-    
+
 </div>
 {% endblock %}
