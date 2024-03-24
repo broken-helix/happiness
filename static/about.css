@@ -1,0 +1,24 @@
+.about-container {
+    background-color: rgb(42, 157, 143, 0.6);
+    padding: 40px;
+    margin: 60px;
+}
+
+h1 {
+    color: #e8e8e8;
+    letter-spacing: 0.3rem;
+    padding-bottom: 30px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+p.card-text {
+    color: #e8e8e8;
+    letter-spacing: 0.2rem;
+    padding-bottom: 30px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+p.card-text {
+    color: black;
+    letter-spacing: 0.1rem;
+}
