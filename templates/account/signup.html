@@ -8,24 +8,26 @@
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <div class="card shadow">
-          <div class="card-body">
-            <h1 class="text-center mb-4">{% trans "Sign Up" %}</h1>
-            <p class="text-center">
-              {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+        <div class="card shadow form-background">
+          <div class="card-body account-templates">
+            <h1 class="text-center mb-4 form-header stroke">{% trans "Sign Up" %}</h1>
+            <p class="text-center account-templates">
+              {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}"><span class="form-span">sign in</span></a>.{% endblocktrans %}
             </p>
             {% url 'account_signup' as action_url %}
-            {% element form form=form method="post" action=action_url tags="entrance,signup" %}
+            <div class="account-inputs">
+            {% element form form=form method="post" class="test" action=action_url tags="entrance,signup" %}
               {% slot body %}
                 {% csrf_token %}
                 {% element fields form=form unlabeled=True %}
                 {% endelement %}
                 {% if redirect_field_value %}
-                  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                  <input type="hidden" class="test" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
               {% endslot %}
               {% slot actions %}
-                <div class="text-center">
+            </div>
+                <div class="text-center account-button">
                   {% element button tags="btn btn-primary btn-block mt-4" type="submit" %}
                     {% trans "Sign Up" %}
                   {% endelement %}

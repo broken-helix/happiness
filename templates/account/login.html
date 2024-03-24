@@ -8,13 +8,14 @@
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <div class="card shadow">
-          <div class="card-body">
-            <h1 class="text-center mb-4">{% trans "Sign In" %}</h1>
-            <p class="text-center">
-              {% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+        <div class="card shadow form-background">
+          <div class="card-body account-templates">
+            <h1 class="text-center mb-4 form-header stroke">{% trans "Sign In" %}</h1>
+            <p class="text-center account-templates">
+              {% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}"><span class="form-span">sign up</span></a> first.{% endblocktrans %}
             </p>
             {% url 'account_login' as login_url %}
+            <div class="account-inputs">
             {% element form form=form method="post" action=login_url tags="entrance,login" %}
               {% slot body %}
                 {% csrf_token %}
@@ -25,7 +26,8 @@
                 {% endif %}
               {% endslot %}
               {% slot actions %}
-                <div class="text-center">
+            </div>
+                <div class="text-center account-button">
                   {% element button type="submit" tags="btn btn-primary btn-block mt-4" %}
                     {% trans "Sign In" %}
                   {% endelement %}
