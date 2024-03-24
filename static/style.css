@@ -8,6 +8,10 @@ body {
   min-height: 100vh;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 nav {
   background-color: #f4a261;
 }
@@ -53,7 +57,6 @@ p {
 
 footer {
   background-color: #f4a261;
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -114,4 +117,24 @@ footer {
 
 .hidden {
   display: none;
+}
+
+/* ANIMATIONS */
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: slideFadeIn 300ms ease-in-out;
 }
