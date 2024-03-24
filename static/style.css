@@ -73,6 +73,12 @@ footer {
   font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  #footer-date,
+  #footer-message {
+    font-size: 0.9rem; /* Decrease font size for smaller screens */
+  }
+}
 /* CARD STYLES */
 
 .c-details span {
