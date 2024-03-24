@@ -32,6 +32,7 @@ p.card-text,
 .round {
     border-radius: 50%;
     margin: 10px;
+    box-shadow: 0px 10px 20px rgba(42, 157, 143, 1);
 }
 
 .card-link:hover {
@@ -62,6 +63,15 @@ p.card-text,
     background-color:#2A9D8F;
     color: white;
     padding: 10px;
+}
+
+.card-fade {
+    opacity: 0; /* Initially hide cards */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.fa-clipboard-check {
+    color:#2A9D8F;
 }
 
 .margins {
