@@ -75,7 +75,7 @@ class AboutView(TemplateView):
                 'name': 'Darrach',
                 'photo': 'images/darrach.jpeg',
                 'role': 'Emojis & Filters',
-                'happiness': 'Organizing and decluttering my space brings me a sense of calm and happiness.',
+                'happiness': 'Cozy nights in by the fire makes me happy',
                 'linkedin': 'https://www.linkedin.com/in/darrach-barneveld-2b493511b/',
                 'github': 'https://github.com/DarrachBarneveld'
             },
