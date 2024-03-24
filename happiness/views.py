@@ -5,6 +5,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.http import JsonResponse
 from django.views import generic
@@ -40,7 +42,7 @@ class HomeView(TemplateView):
         return redirect('allposts')
 
 
-class AddPostPage(generic.CreateView):
+class AddPostPage(LoginRequiredMixin, generic.CreateView):
     """
     Allows a logged-in user to create a new blog post.
     """
@@ -68,6 +70,28 @@ class AddPostPage(generic.CreateView):
             self.request,
             "Post creation failed. Please check your input.")
         return response
+
+
+class UpdatePostView(LoginRequiredMixin, generic.UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'update_post.html'
+    success_url = reverse_lazy('allposts')
+
+    def form_valid(self, form):
+        messages.success(self.request, "Post updated successfully!")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, "Post update failed. Please check your input.")
+        return super().form_invalid(form)
+
+
+class DeletePostView(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView):
+    model = Post
+    success_url = reverse_lazy('allposts')
+    template_name = 'delete_post.html'
+    success_message = "Post deleted successfully!"
 
 
 class AboutView(TemplateView):
