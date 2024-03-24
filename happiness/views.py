@@ -65,13 +65,6 @@ class AddPostPage(generic.CreateView):
             "Post creation failed. Please check your input.")
         return response
 
-class PostSuccessPage(generic.TemplateView):
-    template_name = 'index.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all()
-        return context
 
 class AboutView(TemplateView):
     template_name = 'about.html'
@@ -146,16 +139,22 @@ class AboutView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['team_members'] = team_members
         return context
-    
+ 
 class AllPostsView(TemplateView):
     template_name = 'allposts.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all()  # Fetch all posts
+        posts = Post.objects.all()
+        context['posts'] = posts
+
+        emojis = set()
+        for post in posts:
+            for emoji in post.emoji:
+                emojis.add(emoji)
+        context['emojis'] = emojis
+
         return context
-
-
 class RandomPostView(TemplateView):
     template_name = 'random_posts.html'
 
