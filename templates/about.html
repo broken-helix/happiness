@@ -5,40 +5,6 @@
 {% block content %}
 <style>
 
-/* body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  /* position: relative; */
-/* }
-body {
-
-  background-image: linear-gradient(
-    to right top,
-    #2a9d8f,
-    #4ba885,
-    #6db27a,
-    #91ba6f,
-    #b6c068,
-    #c8bc60,
-    #dab65c,
-    #ebb05d,
-    #eca056,
-    #eb9052,
-    #ea8050,
-    #e76f51
-  );
-}
-
-.background-image-container {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-} */ 
-
 .about-title {
     background-color: #2A9D8F;
     border-radius: 10px;
@@ -47,6 +13,7 @@ body {
 
 .about-subtitle {
     font-size: 1.5rem;
+    color: white;
 }
 
 .round {
@@ -66,6 +33,11 @@ body {
     border-radius: 10px;
 }
 
+.card-fade {
+    opacity: 0; 
+    transition: opacity 0.8s ease;
+}
+
 .card-title {
     background-color:#2A9D8F;
     color: white;
@@ -76,19 +48,20 @@ body {
     margin-top: 120px;
 }
 
+
 </style>
 
 <div class="background-image-container"></div>
 
 <div class="container text-center margins">
     
-    <h1 class="about-title">Happy Hacks Team</h1>
+    <h1 class="about-title">Happy Hacks ✨Team✨</h1>
     <p class = "about-subtitle">Meet our amazing team: </p>
 
     <div class="row">
         {% for member in team_members %}
-        <div class="col-md-6 mb-4">
-            <div class="card mb-3" style="max-width: 540px;">
+        <div class="col-md-6 mb-4 card-fade">
+            <div class="card mb-3 " style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="{% static member.photo %}" class="img-fluid rounded-start round" alt="{{ member.name }}">
@@ -116,8 +89,24 @@ body {
         {% endfor %}
     </div>
 </div>
+
+<script>
+    // Function to show cards sequentially
+    function showCardsSequentially() {
+      const cards = document.querySelectorAll('.card-fade');
+      let delay = 200; 
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.opacity = '1';
+        }, delay * index); 
+      });
+    }
+  
+    // Call the function when the page is fully loaded
+    window.addEventListener('load', showCardsSequentially);
+  </script>
+
 {% endblock %}
 
-<!-- {% block extrastyles %}
-<link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
-{% endblock %} -->
+
+

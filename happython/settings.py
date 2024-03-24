@@ -155,7 +155,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-brokenhelix-happiness-2l7me9nae8c.ws-eu110.gitpod.io'
+    'https://8000-brokenhelix-happiness-jfnf7nz4h3b.ws-eu110.gitpod.io'
 ]
 
 # Default primary key field type

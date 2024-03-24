@@ -1,6 +1,8 @@
 body {
   font-family: "Roboto Slab", sans-serif;
   height: 100%;
+  background-image: url('https://res.cloudinary.com/dxajyjfpw/image/upload/v1711281428/pexels-daniel-spase-1028542_mspopy.jpg');
+  background-size: cover;
 }
 .content {
   display: flex;
@@ -13,7 +15,7 @@ body {
 }
 
 nav {
-  background-color: #f4a261;
+  background-color: rgb(244, 162, 97, 0.8);
 }
 
 /* Styling for the hamburger menu icon */
@@ -56,7 +58,7 @@ p {
 }
 
 footer {
-  background-color: #f4a261;
+  background-color: rgb(244, 162, 97, 0.8);
   left: 0;
   bottom: 0;
   width: 100%;
