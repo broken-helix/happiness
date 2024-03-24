@@ -144,3 +144,53 @@ footer {
 .fade-in {
   animation: slideFadeIn 300ms ease-in-out;
 }
+
+/* Form style for login/sign in/ sign out */
+
+.btn.btn-primary.btn-block {
+  background-color: #e9c46a;
+  border: none;
+  border-radius: 20px;
+  color: #264653;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  outline: none;
+}
+
+.btn.btn-primary.btn-block:hover {
+  background-color: #e76f51;
+  color: #ffff;
+  outline: none;
+}
+
+.btn.btn-primary.btn-block:focus {
+  background-color: #e76f51;
+  color: #ffff;
+  outline: none;
+}
+
+.account-link {
+  color: #264653;
+  font-weight: 700;
+}
+
+.account-link:hover {
+  color: #ffff;
+}
+
+.account-form, .account-form input, .account-form label {
+  color: #ffff;
+}
+
+.my-form {
+  color: #ffff;
+}
+
+.form-background {
+  background-color: #2a9d8f;
+}
+
+.question {
+  color: #264653;
+}
