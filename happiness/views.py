@@ -91,7 +91,7 @@ class AboutView(TemplateView):
                 'name': 'Thomas',
                 'photo': 'images/thomas.jpeg',
                 'role': 'Troubleshooter & Navigation',
-                'happiness': 'I like to.....',
+                'happiness': "Sharing life's great joys with others brings me genuine happiness.",
                 'linkedin': '/',
                 'github': '/'
             },
@@ -99,7 +99,7 @@ class AboutView(TemplateView):
                 'name': 'Alina',
                 'photo': 'images/teo-alina.png',
                 'role': 'Hack Generator',
-                'happiness': 'I find happiness in the simple pleasures of life, like soaking up the warmth of the sun, enjoying the beauty of nature, good beer, surrounding myself with positive people, and sharing laughter through jokes and good company.',
+                'happiness': "I find joy in life's simple pleasures: basking in sunlight, appreciating nature's beauty, good company, and laughter over beer with positive people.",
                 'linkedin': '/',
                 'github': '/'
             },
