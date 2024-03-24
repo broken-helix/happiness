@@ -62,7 +62,7 @@ p.card-text,
 .card-title {
     background-color:#2A9D8F;
     color: white;
-    padding: 10px;
+    padding-bottom: 10px;
     letter-spacing: 0.1rem;
 }
 
