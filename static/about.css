@@ -1,0 +1,33 @@
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+
+  background-image: linear-gradient(
+    to right top,
+    #2a9d8f,
+    #4ba885,
+    #6db27a,
+    #91ba6f,
+    #b6c068,
+    #c8bc60,
+    #dab65c,
+    #ebb05d,
+    #eca056,
+    #eb9052,
+    #ea8050,
+    #e76f51
+  );
+}
+
+.background-image-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+} */
