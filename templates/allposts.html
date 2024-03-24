@@ -18,8 +18,8 @@
   </div>
 </div>
 
-<div class='container mt-2'>
-  <div class="px-3 py-2 bg-light rounded rounded-pill shadow-sm mb-4 border">
+<div class='container mt-2 '>
+  <div class="px-3 py-2 bg-light rounded-lg shadow-sm mb-4 border text-nowrap overflow-scroll">
     {% for emoji in emojis %}
       <button class="btn emoji-btn btn-light border border" data-type='{{emoji}}'>{{ emoji }}</button>
     {% endfor %}

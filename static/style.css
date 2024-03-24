@@ -8,6 +8,10 @@ body {
   min-height: 100vh;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 nav {
   background-color: #f4a261;
 }
