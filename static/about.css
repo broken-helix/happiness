@@ -1,7 +1,7 @@
 .about-container {
     background-color: rgb(42, 157, 143, 0.6);
-    padding: 40px;
-    margin: 60px;
+    padding: 20px;
+    margin: 40px;
 }
 
 h1 {
@@ -11,14 +11,62 @@ h1 {
     font-family: 'Roboto Slab', sans-serif;
 }
 
-p.card-text {
+p.about-subtitle {
     color: #e8e8e8;
     letter-spacing: 0.2rem;
     padding-bottom: 30px;
     font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.1rem;
 }
 
-p.card-text {
-    color: black;
+p.card-text,
+.list-group-item {
+    color: #264653;
     letter-spacing: 0.1rem;
+    padding-top: 20px;
+}
+
+.list-group-item {
+    font-weight: bold;
+}
+
+.round {
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.card-link:hover {
+    background-color: #2A9D8F;
+    color: #eee;
+    text-align: left;
+    padding: 5px;
+    border-radius: 20px;
+
+}
+
+.card-link {
+    background-color: #e76f51;
+    color: #eee;
+    padding: 5px;
+    border-radius: 20px;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card-title {
+    background-color:#2A9D8F;
+    color: white;
+    padding-bottom: 10px;
+    letter-spacing: 0.1rem;
+}
+
+.margins {
+    margin-bottom: 120px;
+    margin-top: 120px;
 }
