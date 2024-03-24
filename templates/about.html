@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'about.css' %}" type="text/css" />
-{% endblock extra_css %}
 
 {% block content %}
 
@@ -38,9 +35,15 @@
                                 <a href="{{ member.github }}" class="card-link" target="_blank"> <i
                                         class="fa-brands fa-github"></i>
                                     GitHub</a>
-                            </div>
+                               </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 </div>
 
 <script>
@@ -54,7 +57,6 @@
         }, delay * index); 
       });
     }
-  
     // Call the function when the page is fully loaded
     window.addEventListener('load', showCardsSequentially);
   </script>
