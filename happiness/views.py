@@ -12,6 +12,7 @@ from .models import Post
 from django.shortcuts import render
 
 
+
 class HomeView(TemplateView):
     template_name = 'index.html'
 
@@ -77,14 +78,69 @@ class AboutView(TemplateView):
 
     def get_context_data(self, **kwargs):
         team_members = [
-            {'name': 'Darrach', 'photo': 'images/darrach.jpeg', 'happiness': 'Darrach likes to...'},
-            {'name': 'James', 'photo': 'images/james.jpeg', 'happiness': 'I like to....'},
-            {'name': 'Thomas', 'photo': 'images/thomas.jpeg', 'happiness': 'I like to.....'},
-            {'name': 'Alina', 'photo': 'images/teo-alina.png', 'happiness': 'I like to.....'},
-            {'name': 'Fergal', 'photo': 'images/fergal.jpeg', 'happiness': 'I like to.....'},
-            {'name': 'Stefan', 'photo': 'images/stefan.png', 'happiness': 'I like to.....'},
-            {'name': 'Elvis', 'photo': 'images/elvis.jpeg', 'happiness': 'I like to.....'},
-            {'name': 'Monica', 'photo': 'images/monica.png', 'happiness': 'I like to.....'},
+            {
+                'name': 'Darrach',
+                'photo': 'images/darrach.jpeg',
+                'role': 'text',
+                'happiness': 'Darrach likes to...',
+                'linkedin': 'https://www.linkedin.com/in/darrach-barneveld-2b493511b/',
+                'github': 'https://github.com/DarrachBarneveld'
+            },
+            {
+                'name': 'James',
+                'photo': 'images/james.jpeg',
+                'role': 'text',
+                'happiness': 'I like to....',
+                'linkedin': '/',
+                'github': '/'
+            },
+            {
+                'name': 'Thomas',
+                'photo': 'images/thomas.jpeg',
+                'role': 'text',
+                'happiness': 'I like to.....',
+                'linkedin': '/',
+                'github': '/'
+            },
+            {
+                'name': 'Alina',
+                'photo': 'images/teo-alina.png',
+                'role': 'text',
+                'happiness': 'I like to.....',
+                'linkedin': '/',
+                'github': '/'
+            },
+            {
+                'name': 'Monica',
+                'photo': 'images/monica.png',
+                'role': 'Hackaton Newbie',
+                'happiness': 'It brings me joy to assist others and see the happiness I can bring into their lives.',
+                'linkedin': 'https://www.linkedin.com/in/monica-iancu-362825137/',
+                'github': 'https://github.com/Monicaular'
+            },
+            {
+                'name': 'Fergal',
+                'photo': 'images/fergal.jpeg',
+                'role': 'text','happiness': 'I like to.....',
+                'linkedin': '/',
+                'github': '/'
+            },
+            {
+                'name': 'Stefan',
+                'photo': 'images/stefan.png',
+                'role': 'text',
+                'happiness': 'I like to.....',
+                'linkedin': '/',
+                'github': '/'
+            },
+            {
+                'name': 'Elvis',
+                'photo': 'images/elvis.jpeg',
+                'role': 'text',
+                'happiness': 'I like to.....',
+                'linkedin': '/',
+                'github': '/'
+            },
         ]
 
         context = super().get_context_data(**kwargs)
