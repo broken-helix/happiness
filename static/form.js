@@ -1,8 +1,11 @@
+const audio = new Audio("/static/audio/happyclick.mp3");
+
 const emojiPickerButton = document.getElementById("emojiPickerButton");
 const emojiPickerInput = document.getElementById("id_emoji");
 const pickerModel = document.getElementById("emoji-picker");
 const tags = document.getElementById("id_tags");
 const overlay = document.getElementById("overlay");
+const submit = document.getElementById("submit");
 
 const pickerOptions = { onEmojiSelect: selectEmoji };
 const picker = new EmojiMart.Picker(pickerOptions);
@@ -35,3 +38,7 @@ function clearTextarea() {
     textarea.value = "";
   }
 }
+
+submit.addEventListener("click", () => {
+  audio.play();
+});
