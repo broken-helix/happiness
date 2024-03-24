@@ -1,3 +1,5 @@
+import time
+
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import get_user_model
@@ -10,6 +12,7 @@ import random
 from .forms import PostForm
 from .models import Post
 from django.shortcuts import render
+
 
 
 
@@ -56,6 +59,7 @@ class AddPostPage(generic.CreateView):
         messages.success(
             self.request,
             "Post created successfully! Review in progress!")
+        time.sleep(6)
         return response
 
     def form_invalid(self, form):
