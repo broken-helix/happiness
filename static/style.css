@@ -114,3 +114,23 @@ footer {
 .hidden {
   display: none;
 }
+
+/* ANIMATIONS */
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: slideFadeIn 300ms ease-in-out;
+}
