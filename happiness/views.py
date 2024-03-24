@@ -115,7 +115,7 @@ class AboutView(TemplateView):
                 'name': 'Fergal',
                 'photo': 'images/fergal.jpeg',
                 'role': 'Styles',
-                'happiness': 'Engaging in regular exercise releases endorphins and boosts my overall happiness.',
+                'happiness': 'The exhilarating rush of riding the waves while surfing fills me with pure happiness and a deep sense of contentment.',
                 'linkedin': 'https://www.linkedin.com/in/fergal-mulligan-100686168/',
                 'github': 'https://github.com/fergal92'
             },
