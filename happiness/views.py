@@ -44,7 +44,7 @@ class AddPostPage(generic.CreateView):
 
     form_class = PostForm
     template_name = "form.html"
-    success_url = reverse_lazy('post_success')
+    success_url = reverse_lazy('allposts')
 
     def form_valid(self, form):
         User = get_user_model()
