@@ -1,7 +1,15 @@
+:root {
+  --clr-yellow: #e9c46a;
+  --clr-orange: #f4a261;
+  --clr-green: #2a9d8f;
+  --clr-dark-green: #264563;
+  --box-shadow-yellow: #e9c46a 0px 5px 15px;
+}
+
 body {
   font-family: "Roboto Slab", sans-serif;
   height: 100%;
-  background-image: url('https://res.cloudinary.com/dxajyjfpw/image/upload/v1711281428/pexels-daniel-spase-1028542_mspopy.jpg');
+  background-image: url("https://res.cloudinary.com/dxajyjfpw/image/upload/v1711281428/pexels-daniel-spase-1028542_mspopy.jpg");
   background-size: cover;
 }
 .content {
@@ -181,7 +189,9 @@ footer {
   color: #ffff;
 }
 
-.account-form, .account-form input, .account-form label {
+.account-form,
+.account-form input,
+.account-form label {
   color: #ffff;
 }
 
