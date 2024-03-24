@@ -74,7 +74,7 @@ class AboutView(TemplateView):
             {
                 'name': 'Darrach',
                 'photo': 'images/darrach.jpeg',
-                'role': 'text',
+                'role': 'Emojis & Filters',
                 'happiness': 'Darrach likes to...',
                 'linkedin': 'https://www.linkedin.com/in/darrach-barneveld-2b493511b/',
                 'github': 'https://github.com/DarrachBarneveld'
@@ -82,15 +82,15 @@ class AboutView(TemplateView):
             {
                 'name': 'James',
                 'photo': 'images/james.jpeg',
-                'role': 'text',
-                'happiness': 'I like to....',
+                'role': 'Scrum Manager',
+                'happiness': 'I like to get out clearing up litter to make me feel happier',
                 'linkedin': '/',
                 'github': '/'
             },
             {
                 'name': 'Thomas',
                 'photo': 'images/thomas.jpeg',
-                'role': 'text',
+                'role': 'Troubleshooter & Navigation',
                 'happiness': 'I like to.....',
                 'linkedin': '/',
                 'github': '/'
@@ -98,15 +98,15 @@ class AboutView(TemplateView):
             {
                 'name': 'Alina',
                 'photo': 'images/teo-alina.png',
-                'role': 'text',
-                'happiness': 'I like to.....',
+                'role': 'Hack Generator',
+                'happiness': 'I find happiness in the simple pleasures of life, like soaking up the warmth of the sun, enjoying the beauty of nature, good beer, surrounding myself with positive people, and sharing laughter through jokes and good company.',
                 'linkedin': '/',
                 'github': '/'
             },
             {
                 'name': 'Monica',
                 'photo': 'images/monica.png',
-                'role': 'Hackaton Newbie',
+                'role': 'Team Page',
                 'happiness': 'It brings me joy to assist others and see the happiness I can bring into their lives.',
                 'linkedin': 'https://www.linkedin.com/in/monica-iancu-362825137/',
                 'github': 'https://github.com/Monicaular'
@@ -114,14 +114,15 @@ class AboutView(TemplateView):
             {
                 'name': 'Fergal',
                 'photo': 'images/fergal.jpeg',
-                'role': 'text','happiness': 'I like to.....',
+                'role': 'Styles',
+                'happiness': 'I like to.....',
                 'linkedin': '/',
                 'github': '/'
             },
             {
                 'name': 'Stefan',
-                'photo': 'images/stefan.png',
-                'role': 'text',
+                'photo': 'images/stefan-ruppe.png',
+                'role': 'Styles',
                 'happiness': 'I like to.....',
                 'linkedin': '/',
                 'github': '/'
@@ -129,7 +130,7 @@ class AboutView(TemplateView):
             {
                 'name': 'Elvis',
                 'photo': 'images/elvis.jpeg',
-                'role': 'text',
+                'role': 'README.md',
                 'happiness': 'I like to.....',
                 'linkedin': '/',
                 'github': '/'
