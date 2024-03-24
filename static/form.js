@@ -1,6 +1,8 @@
 const emojiPickerButton = document.getElementById("emojiPickerButton");
-const emojiPickerInput = document.getElementById("emoji");
+const emojiPickerInput = document.getElementById("id_emoji");
 const pickerModel = document.getElementById("emoji-picker");
+const tags = document.getElementById("id_tags");
+const overlay = document.getElementById("overlay");
 
 const pickerOptions = { onEmojiSelect: selectEmoji };
 const picker = new EmojiMart.Picker(pickerOptions);
@@ -9,23 +11,20 @@ pickerModel.appendChild(picker);
 
 pickerModel.style.display = "none";
 
+overlay.addEventListener("click", () => {
+  pickerModel.style.display = "none";
+  overlay.style.display = "none";
+});
+
 emojiPickerButton.addEventListener("click", () => {
-  console.log("clicked");
-  const rect = emojiPickerButton.getBoundingClientRect();
-  pickerModel.style.display = pickerModel.style.display === "none" ? "flex" : "none";
-  pickerModel.style.position = "absolute";
-  pickerModel.style.top = rect.bottom + "px";
-  pickerModel.style.left = rect.left + emojiPickerButton.offsetWidth +"px";
+  pickerModel.style.display = "flex";
+  overlay.style.display = "block";
 });
 
 function selectEmoji(emoji) {
-  console.log(emoji);
-  emojiPickerInput.value += emoji.native;
-}
+  tags.value = emoji.keywords.join(",");
+  emojiPickerInput.value = emoji.native;
 
-function clearTextarea() {
-  var textarea = document.getElementById('content');
-  if (textarea.value == 'To make myself happy I like to...') {
-       textarea.value = '';
-      }
+  pickerModel.style.display = "none";
+  overlay.style.display = "none";
 }
