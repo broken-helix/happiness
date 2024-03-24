@@ -30,8 +30,8 @@ function selectEmoji(emoji) {
 }
 
 function clearTextarea() {
-  var textarea = document.getElementById('id_title');
-  if (textarea.value == 'To make myself happy I like to...') {
-      textarea.value = '';
+  var textarea = document.getElementById("id_title");
+  if (textarea.value == "To make myself happy I like to...") {
+    textarea.value = "";
   }
 }
