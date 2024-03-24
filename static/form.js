@@ -28,3 +28,10 @@ function selectEmoji(emoji) {
   pickerModel.style.display = "none";
   overlay.style.display = "none";
 }
+
+function clearTextarea() {
+  var textarea = document.getElementById('id_title');
+  if (textarea.value == 'To make myself happy I like to...') {
+      textarea.value = '';
+  }
+}
