@@ -72,14 +72,19 @@ class AddPostPage(LoginRequiredMixin, generic.CreateView):
         return response
 
 
-class UpdatePostView(LoginRequiredMixin, generic.UpdateView):
+class UpdatePostView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'update_post.html'
     success_url = reverse_lazy('allposts')
+    success_message = "Post updated successfully!"
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(author=self.request.user)
 
     def form_valid(self, form):
-        messages.success(self.request, "Post updated successfully!")
+        messages.success(self.request, self.success_message)
         return super().form_valid(form)
 
     def form_invalid(self, form):
@@ -92,6 +97,14 @@ class DeletePostView(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView
     success_url = reverse_lazy('allposts')
     template_name = 'delete_post.html'
     success_message = "Post deleted successfully!"
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(author=self.request.user)
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super().delete(request, *args, **kwargs)
 
 
 class AboutView(TemplateView):
