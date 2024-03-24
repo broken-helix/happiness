@@ -103,6 +103,7 @@ footer {
   #footer-date,
   #footer-message {
     font-size: 0.9rem; /* Decrease font size for smaller screens */
+    text-wrap: wrap;
   }
 }
 /* CARD STYLES */
