@@ -104,6 +104,7 @@ footer {
   #footer-message {
     font-size: 0.9rem; /* Decrease font size for smaller screens */
     text-wrap: wrap;
+    padding-bottom: 0;
   }
 }
 /* CARD STYLES */
