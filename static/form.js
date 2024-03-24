@@ -22,3 +22,10 @@ function selectEmoji(emoji) {
   console.log(emoji);
   emojiPickerInput.value += emoji.native;
 }
+
+function clearTextarea() {
+  var textarea = document.getElementById('content');
+  if (textarea.value == 'To make myself happy I like to...') {
+       textarea.value = '';
+      }
+}
