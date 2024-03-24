@@ -8,6 +8,9 @@ const wow = new Audio("/static/audio/wow.mp3");
 const audioArray = [bloop, box, cat, pop, wee, wow];
 
 function generateRandomPost() {
+  const randomIndex = Math.floor(Math.random() * audioArray.length);
+  const soundEffect = audioArray[randomIndex];
+  soundEffect.play();
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "/random-posts/", true);
   xhr.setRequestHeader("Content-Type", "application/json");
