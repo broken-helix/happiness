@@ -19,9 +19,26 @@
     </div>
     </div>
 
+
+    <div class="text-center d-flex justify-content-around align-items-center">
+    <audio class="hidden" id="audio" controls>
+        <source src="{% static 'audio/happy.mp3' %}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <button id="btn-music" class='icon-btn'>
+        <i class="fa-solid fa-music"></i>
+    </button>
+
     <button type="button" onclick="generateRandomPost()" class="btn btn-primary">Generate Random Post</button>
 
+    <a type="button" href={% url "add_post" %} class="icon-btn"><i class="fa-solid fa-plus"></i></a>    
+
 </div>
+
+    
+</div>
+
+
     {% csrf_token %}
     {% load static %}
     

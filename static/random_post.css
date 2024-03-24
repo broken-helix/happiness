@@ -1,106 +1,126 @@
-.container.mt-5 {
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Quicksand', sans-serif;
-    background-color: rgb(42, 157, 143, 0.6);
-    border-radius: 30px;
-    padding: 60px 20px;
+.icon-btn {
+  background: var(--clr-dark-green);
+  padding: 1rem;
+  color: var(--clr-yellow);
+  border-radius: 100%;
+  border: 2px solid var(--clr-yellow);
+  box-shadow: var(--box-shadow-yellow);
+  transition: 150ms ease-in-out;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
- p {
-    font-family: 'Roboto Slab';
-    letter-spacing: 0.1rem;
-    font-size: 1.1rem;
-    color: #e76f51;
+.icon-btn:hover,
+.icon-btn:focus {
+  background: var(--clr-green);
+  transform: scale(0.98);
+  text-decoration: none;
+}
 
+.container.mt-5 {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Quicksand", sans-serif;
+  background-color: rgb(42, 157, 143, 0.6);
+  border-radius: 30px;
+  padding: 60px 20px;
+}
+
+p {
+  font-family: "Roboto Slab";
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  color: #e76f51;
 }
 
 .random-container {
-    background-color: white;
-    border-radius: 20px;
-    border: 6px #E9C46A solid;
-    margin: 20px;
-    background-color: rgb(255, 255, 255, 0.9);
-    border-radius: 20px;
-    border: 6px #E9C46A solid;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  border: 6px #e9c46a solid;
+  margin: 20px;
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 20px;
+  border: 6px #e9c46a solid;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .description {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .container.mb-4 {
-    background-color: #ededed;
-    border-radius: 20px;
+  background-color: #ededed;
+  border-radius: 20px;
 }
 
 .card-body {
 }
 
 h1 {
-    font-family: 'Quicksand', sans-serif;
-    color: #ededed;
-    letter-spacing: 0.3rem;
-    font-size: 2.9rem;
-    padding-top: 10px;
-    padding-bottom: 60px;
-
+  font-family: "Quicksand", sans-serif;
+  color: #ededed;
+  letter-spacing: 0.3rem;
+  font-size: 2.9rem;
+  padding-top: 10px;
+  padding-bottom: 60px;
 }
 
 .card-title {
-    font-family: "Roboto Slab", sans-serif;
-    color: #264653;
-    padding-bottom: 20px;
-    letter-spacing: 0.1rem;
-    font-size: 1.7rem;
+  font-family: "Roboto Slab", sans-serif;
+  color: #264653;
+  padding-bottom: 20px;
+  letter-spacing: 0.1rem;
+  font-size: 1.7rem;
 }
 
 .btn-primary {
-    background-color: #E9C46A;
-    border: none;
-    border-radius: 20px;
-    color: #264653;
-    font-family: 'Roboto Slab';
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    outline: none;
-    margin-top: 30px;
+  background-color: #e9c46a;
+  border: none;
+  border-radius: 20px;
+  color: #264653;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  outline: none;
+  margin-top: 30px;
 }
 
 .btn-primary:hover {
-    background-color: #e76f51;
-    color: #ffff;
-    outline: none;
+  background-color: #e76f51;
+  color: #ffff;
+  outline: none;
 }
 
 .btn-primary:focus {
-    background-color: #e76f51;
-    color: #ffff;
-    outline: none;
+  background-color: #e76f51;
+  color: #ffff;
+  outline: none;
 }
 
 /* Media Queries */
 
 @media only screen and (max-width: 400px) {
-    .container.mt-5 {
-        padding: 20px;
-    }
+  .container.mt-5 {
+    padding: 20px;
+  }
 
-    .description {
-        padding-top: 0;
-    }
-    .card-body {
-        padding: 0;
-    }
-    .card-title {
-        font-family: "Roboto Slab", sans-serif;
-        color: #ffff;
-        padding-bottom: 0;
-        letter-spacing: 0.1rem;
-        font-size: 1.7rem;
-    }
+  .description {
+    padding-top: 0;
+  }
+  .card-body {
+    padding: 0;
+  }
+  .card-title {
+    font-family: "Roboto Slab", sans-serif;
+    color: #ffff;
+    padding-bottom: 0;
+    letter-spacing: 0.1rem;
+    font-size: 1.7rem;
+  }
 }
