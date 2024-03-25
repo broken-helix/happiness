@@ -33,6 +33,7 @@ View live website here: [Happy Hacks](https://happiness-generator-c0a5ad8756d8.h
   * [Team Page](#team-page)
   * [CRUD Functionality](#crud-functionality)
 - [**Testing**](#testing)
+- [**Bugs**](#bugs)
 - [**Technologies Used**](#technology-used)
 - [**The Team**](#the-team)
 
