@@ -244,3 +244,26 @@ footer {
   color: #ededed;
   font-weight: 700;
 }
+
+/* POst Success Animation */
+
+.particles-container {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  animation: explode 1s reverse linear;
+  transform: translatex(-50%) translatey(-50%);
+  font-size: 1em;
+}
+
+@keyframes explode {
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: scale(5);
+  }
+}

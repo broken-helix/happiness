@@ -42,7 +42,7 @@ class HomeView(TemplateView):
         return redirect('allposts')
 
 
-class AddPostPage(LoginRequiredMixin, generic.CreateView):
+class AddPostPage(generic.CreateView):
     """
     Allows a logged-in user to create a new blog post.
     """
