@@ -146,7 +146,7 @@ Wireframes for different views are linked here:
 - The Add Event page is essentially a form to complete.
 - If the user is not logged in, they will be redirected to login.
 - The user can type their 'happy hack' and pick an emoji to illustrate the hack.
-- A sound will be played when the user successfully submits a post.
+- A sound will be played when the user successfully submits a post, along with a happy animation.
 
 ![Add Event](/static/docs/add-hack.jpg)
 
@@ -190,9 +190,9 @@ Wireframes for different views are linked here:
 
 ## **Bugs**
 
-* Issue - 
-* Cause - 
-* Resolution - 
+* Issue - Error when signing up
+* Cause - Caused by entering email address
+* Resolution - Email address not required, so removed.
 
 <hr>
 
