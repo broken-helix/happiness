@@ -9,7 +9,8 @@ class PostForm(forms.ModelForm):
     """
 
     tags = forms.CharField(
-        widget=forms.TextInput(attrs={'placeholder': 'Enter tags separated by commas'}),
+        widget=forms.TextInput(
+            attrs={'placeholder': 'Enter tags separated by commas'}),
         required=False,
     )
 
