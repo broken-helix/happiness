@@ -30,9 +30,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-brokenhelix-happiness-jfnf7nz4h3b.ws-eu110.gitpod.io', 'happiness-generator-c0a5ad8756d8.herokuapp.com', 'localhost', '8000-brokenhelix-happiness-pb2obk1d7ae.ws-eu110.gitpod.io', '8000-brokenhelix-happiness-judy677pqir.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['happiness-generator-c0a5ad8756d8.herokuapp.com']
 
 
 
@@ -155,7 +155,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-brokenhelix-happiness-jfnf7nz4h3b.ws-eu110.gitpod.io'
+    'https://8000-brokenhelix-happiness-2l7me9nae8c.ws-eu110.gitpod.io'
 ]
 
 # Default primary key field type
