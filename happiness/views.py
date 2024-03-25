@@ -26,7 +26,7 @@ class HomeView(TemplateView):
         context['posts'] = Post.objects.all()
         context['user'] = self.request.user
         return context
-    
+
     def post(self, request):
         post_id = request.POST.get('post_id')
         post = get_object_or_404(Post, pk=post_id)

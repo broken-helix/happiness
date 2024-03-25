@@ -2,7 +2,7 @@
 
 :root {
   --clr-yellow: #e9c46a;
-  --clr-orange: #f4a261;
+  --clr-orange: #e76f51;
   --clr-green: #2a9d8f;
   --clr-dark-green: #264563;
   --box-shadow-yellow: #e9c46a 0px 5px 15px;
@@ -121,14 +121,14 @@ footer {
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background-color: #eee;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 39px;
+  font-size: 4rem;
 }
 
 .badge-button {
@@ -151,6 +151,10 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.bg-orange {
+  background: var(--clr-orange);
 }
 
 /* ANIMATIONS */
@@ -232,11 +236,11 @@ footer {
 .account-inputs {
   display: flex;
   justify-content: center;
-  align-items: center; 
-  text-align: center; 
-  margin: 0 auto; 
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
   max-width: 600px;
   padding: 20px;
   color: #ededed;
-  font-weight: 700
+  font-weight: 700;
 }
