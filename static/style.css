@@ -255,6 +255,14 @@ a:hover {
   font-weight: 700;
 }
 
+#id_email {
+  display: none;
+}
+
+label[for="id_email"] {
+  display: none;
+}
+
 /* POst Success Animation */
 
 .particles-container {
