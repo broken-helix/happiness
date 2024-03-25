@@ -24,7 +24,7 @@ function generateRandomPost() {
       document.getElementById("random-post").innerHTML = `
                 <div class="card-body">
                     <h2 class="card-title">${responseData.title}</h2>
-                    <p class="card-text">${responseData.emoji}</p>
+                    <p class="card-text h1" >${responseData.emoji}</p>
                     <p class="card-text">${"Author: " + responseData.author}</p>
                 </div>
             `;
