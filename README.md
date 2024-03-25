@@ -188,11 +188,21 @@ Wireframes for different views are linked here:
 
 <hr>
 
+## **Bugs**
+
+* Issue - 
+* Cause - 
+* Resolution - 
+
+<hr>
+
 ## **Technologies Used**
-   * DJANGO
-   * HTML
-   * CSS
-   * Bootstrap
+* DJANGO
+* HTML
+* CSS
+* Bootstrap
+* Javascript
+* EmojiMart
 
 <hr>
 
