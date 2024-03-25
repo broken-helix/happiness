@@ -35,7 +35,7 @@ View live website here: [Happy Hacks](https://happiness-generator-c0a5ad8756d8.h
 - We selected a palette of complimentary colours with a happy theme.
 - Colours were selected using the coolors color palette generator.<br><br>
 
-![Coolors Palette](/static/docs/palette.png)
+![Coolors Palette](static/docs/palette.png)
 
 ### **Typography**
 - The fonts used throughout the site were selected from Google Fonts.
