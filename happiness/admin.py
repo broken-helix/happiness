@@ -6,6 +6,7 @@ from .models import Post, Tag
 
 # Register your models here.
 
+
 class PostInline(admin.TabularInline):
     """
     Inline representation of blog posts for the admin panel.
@@ -38,9 +39,11 @@ class UserAdmin(admin.ModelAdmin):
     fields = ("username", "first_name", "last_name", "email")
     inlines = [PostInline]
 
+
 #  Register the UserAdmin class with the User model
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
+
 
 class PostAdmin(admin.ModelAdmin):
     """
@@ -71,10 +74,9 @@ class TagAdmin(admin.ModelAdmin):
 
     """
 
-
-    model = Tag 
+    model = Tag
     fields = ("name",)
+
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Tag, TagAdmin)
-

@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 import uuid
 
+
 # Create your models here.
 class Tag(models.Model):
     """
@@ -18,6 +19,7 @@ class Tag(models.Model):
         """Return a string representation of the object (the tag's name)."""
 
         return str(self.name)
+
 
 class Post(models.Model):
     """
