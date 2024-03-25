@@ -229,6 +229,16 @@ footer {
   color: #e9c46a;
 }
 
+a { 
+  color: #e9c46a;
+  text-decoration: underline;
+}
+
+a:hover {
+  color:#e76f51;
+  text-decoration: underline;
+}
+
 .form-span:hover {
   color: #e76f51;
 }
@@ -267,3 +277,4 @@ footer {
     transform: scale(5);
   }
 }
+
