@@ -191,10 +191,11 @@ class AllPostsView(TemplateView):
         posts = Post.objects.all()
         context['posts'] = posts
 
-        emojis = []
+        emojis = set()
         for post in posts:
-            emojis.append(post.emoji)
-        print(emojis)
+            for emoji in post.emoji:
+                if emoji != ' ' and emoji != '':
+                    emojis.add(emoji)
         context['emojis'] = emojis
 
         return context
