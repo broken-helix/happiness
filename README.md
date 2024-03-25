@@ -35,6 +35,7 @@ View live website here: [Happy Hacks](https://happiness-generator-c0a5ad8756d8.h
 - [**Testing**](#testing)
 - [**Bugs**](#bugs)
 - [**Technologies Used**](#technology-used)
+- [**Credits**](#credits)
 - [**The Team**](#the-team)
 
 <hr>
@@ -79,6 +80,7 @@ View live website here: [Happy Hacks](https://happiness-generator-c0a5ad8756d8.h
 - [Balsamiq](https://balsamiq.com/) was used for the design of wireframes.
 - [Fontawesome](https://fontawesome.com/) was used for the icons on various buttons.
 - [DrawSQL](https://drawsql.app/) was used to sketch out the database models at an early stage.
+- [Pexels](https://www.pexels.com/) was used to source the background image.
 
 <hr>
 
@@ -206,6 +208,10 @@ Wireframes for different views are linked here:
 * EmojiMart
 
 <hr>
+
+## **Credits**
+
+- The background image was sourced from [Daniel Space on Pexels](https://www.pexels.com/photo/shallow-focus-photography-of-yellow-flowers-1028542/)
 
 ## **The Team**
 
