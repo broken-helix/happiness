@@ -3,13 +3,15 @@
 
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'form.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'about.css' %}" type="text/css" />
 {% endblock extra_css %}
+
 
 {% block content %}
 
 <div class='container mt-2'>
-<div class="p-3 bg-light rounded rounded-pill shadow-sm mb-2 border">
+  <h1 class='stroke text-light text-center'>All Posts</h1>
+<div class="p-2 bg-light rounded rounded-pill shadow-sm mb-2 border">
   <div class="input-group">
     <input id='searchBar' type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
     <div class="input-group-append">
@@ -19,7 +21,7 @@
 </div>
 
 <div class='container mt-2 '>
-  <div class="px-3 py-2 bg-light rounded-lg shadow-sm mb-4 border text-nowrap overflow-scroll no-scrollbar">
+  <div class="px-3 py-2  mb-4 text-nowrap overflow-scroll no-scrollbar">
     {% for emoji in emojis %}
       <button class="btn emoji-btn btn-light border border" data-type='{{emoji}}'>{{ emoji|safe }}</button>
     {% endfor %}

@@ -1,86 +1,84 @@
 .about-container {
-    background-color: rgb(42, 157, 143, 0.6);
-    padding: 20px;
-    margin: 40px;
+  background-color: rgb(42, 157, 143, 0.6);
+  padding: 20px;
+  margin: 40px;
 }
 
 h1 {
-    color: #e8e8e8;
-    letter-spacing: 0.3rem;
-    padding-bottom: 30px;
-    font-family: 'Roboto Slab', sans-serif;
+  color: #e8e8e8;
+  letter-spacing: 0.3rem;
+  padding-bottom: 30px;
+  font-family: "Roboto Slab", sans-serif;
 }
 
 p.about-subtitle {
-    color: #e8e8e8;
-    letter-spacing: 0.2rem;
-    padding-bottom: 30px;
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 1.1rem;
+  color: #e8e8e8;
+  letter-spacing: 0.2rem;
+  padding-bottom: 30px;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 1.1rem;
 }
 
 p.card-text,
 .list-group-item {
-    color: #264653;
-    padding-top: 20px;
+  color: #264653;
+  padding-top: 20px;
 }
 
 .list-group-item {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .round {
-    border-radius: 50%;
-    margin: 10px;
-    box-shadow: 0px 10px 20px rgba(42, 157, 143, 1);
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 0px 10px 20px rgba(42, 157, 143, 1);
 }
 
 .card-link:hover {
-    background-color: #2A9D8F;
-    color: #eee;
-    text-align: left;
-    padding: 5px;
-    border-radius: 20px;
-
+  background-color: #2a9d8f;
+  color: #eee;
+  text-align: left;
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .card-link {
-    background-color: #e76f51;
-    color: #eee;
-    padding: 5px;
-    border-radius: 20px;
-
+  background-color: #e76f51;
+  color: #eee;
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .card-title {
-    background-color:#2A9D8F;
-    color: white;
-    padding: 10px;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px;
 }
 
 .card-fade {
-    opacity: 0; /* Initially hide cards */
-    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  opacity: 0; /* Initially hide cards */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
 }
 
 .fa-clipboard-check {
-    color:#2A9D8F;
+  color: #2a9d8f;
 }
 
 .margins {
-    margin-bottom: 120px;
-    margin-top: 120px;
+  margin-bottom: 120px;
+  margin-top: 120px;
 }
 
-@media screen and (max-width:767px) {
-    .round {
-        width: 150px;
-    }
+@media screen and (max-width: 767px) {
+  .round {
+    width: 150px;
+  }
 }
