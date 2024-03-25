@@ -33,9 +33,10 @@ View live website here: [Happy Hacks](https://happiness-generator-c0a5ad8756d8.h
 ### **Colours**
 - Research indicated that the happiest colour was yellow, with oranges also featuring.
 - We selected a palette of complimentary colours with a happy theme.
-- Colours were selected using the coolors color palette generator.<br><br>
+- Colours were selected using the coolors color palette generator.
+- An image incorporating yellow flowers was used as the background<br><br>
 
-![Coolors Palette](static/docs/palette.png)
+![Coolors Palette](/static/docs/palette.png)
 
 ### **Typography**
 - The fonts used throughout the site were selected from Google Fonts.
@@ -69,26 +70,70 @@ Wireframes for different views are linked here:
 
 <hr>
 
-## Features
-### Home
-   ![Screenshot (360)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/16920442-a8c4-41ea-93fa-849ee6afdf31)
-   * Represent the homepage. The first page that a user see when they log in into the website, and also a page where users can see recently added post from the <strong> Add post </strong> section
+## **FEATURES**
 
-### Add Post
-   ![Screenshot (361)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/498d1dd0-00ec-4380-8acd-256c2517b232)
-   * This section has <strong>Title</strong> and <strong>Emoji</strong> input. It require's you to express how you feel at the moment with a title and emoji.
+### **Navigation**
 
-### About
-   ![Screenshot (362)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/c016a66f-f91c-4fc7-bd01-8e44db39b485)
-   * This section represent the creators of this site, a group of people called <strong>Happy Hacks Team.</strong> In this section you can view the images and names of all creators
+#### **Desktop Navigation**
+- The navigation bar is located at the top of each page on the site.
+- The menu contains links for the 'Home Page' (which is also linked via the Brand Logo), the 'Add Hack', 'Hacks', 'Team' page links, along with 'Login' and 'Register' links. 
+- Once the user is logged in the menu the 'Register' link is replaced with the 'Logout' page link.
+- The navbar is fully responsive and collapses into a burger menu for mobile devices.
 
-### Sign Up
-   ![Screenshot (363)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/0ba991c0-ba21-49e5-bbd9-3f23dc1bbbb9)
-   * As a new a new user, signing up might be the best option for you to have yourself registered as a user.
+![Desktop Nav](/static/docs/navbar.jpg)
 
-### Login
-   ![Screenshot (364)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/d1ee28aa-5dfc-46bc-b156-1539e46ff3d1)
-   * A sign in page to always have you log in back to the website with your correct and valid credentials in case maybe you got yourself mistakenly log out
+#### **Mobile Navigation**
+- Presented as a burger menu for design responsiveness.
+- Once clicked a dropdown menu appears including all the page links as above.
+
+![Mobile Nav](/static/docs/nav-mob.jpg)
+
+![Mobile Nav Expanded](/static/docs/nav-mob-expanded.jpg)
+
+### **Footer**
+- Located at the bottom of the page the footer loads text with todays date and a random happy thought.
+
+![Footer](/static/docs/footer.jpg)
+
+### **Home Page**
+- Upon landing on the homepage the user is presented with the title 'Happy Hacks Generator'.
+- Below the title, a message instructs the user to press the button to 'generate happiness'.
+- When the button is pressed, a random post (hack) is displayed to the user.
+- A button at the left, illustrated with a music note, will play a happy song.
+- A button at the right, illustrated with a '+' sign, will take the user to the 'Add Hack' page.
+
+![Home Page](/static/docs/home.jpg)
+
+![Home Page Hack](/static/docs/home-hack.jpg)
+
+#### **Add Hack Page**
+- The Add Event page is essentially a form to complete.
+- If the user is not logged in, they will be redirected to login.
+- The user can type their 'happy hack' and pick an emoji to illustrate the hack.
+- A sound will be played when the user successfully submits a post.
+
+![Add Event](/static/docs/add-hack.jpg)
+
+![Add Emoji](/static/docs/add-emoji.jpg)
+
+### **Hacks Page**
+- 
+
+![Hacks Page]()
+
+### **Edit Hack Page**
+- 
+
+![Add Event](docs/images/add-event.jpg)
+
+### **Delete Hack Page**
+- The Delete Event page is only accessible via the link on the Event Details page is the user is signed in and the creator of the event (the organiser).
+- Users who circumvent this by typing /delete at the end of the url are met with a 403 Forbidden page and cannot complete the action, ensuring they do not edit others' events.
+
+![Delete Event](docs/images/delete.jpg)
+
+### **Like Button**
+- 
 
 ## Technologies Used
    * DJANGO
